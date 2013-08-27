@@ -1,4 +1,4 @@
-package ejercicio3
+package main
 
 import scala.collection.mutable.ListBuffer
 

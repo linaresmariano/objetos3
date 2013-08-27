@@ -1,4 +1,4 @@
-package ejercicio3
+package main
 
 class SesionDeSeminario(fechaDeSesion : AlgunDate, horaComienzoDeSesion : Hora, horaFinDeSesion : Hora) {
 

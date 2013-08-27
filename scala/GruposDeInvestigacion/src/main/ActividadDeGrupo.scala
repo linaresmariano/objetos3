@@ -1,7 +1,7 @@
-package ejercicio3
+package main
 
 
-abstract class ActividadDeGrupo (nombreDeLaActividad : String,montoTotalDeFinanciamiento : Int, responsable : IntegranteDeGrupoDeInvestigacion, grupoOrganizadorDeLaActividad : GrupoDeInvestigacion) {
+abstract class ActividadDeGrupo (nombreDeLaActividad: String, montoTotalDeFinanciamiento: Int, responsable: IntegranteDeGrupoDeInvestigacion, grupoOrganizadorDeLaActividad: GrupoDeInvestigacion) {
 	var aprobacion : Boolean = false
 	val fechaDePresentacionDeLaActividadALaUniversidad : AlgunDate
 	var fechaDeAprobacionDeLaActividad : AlgunDate

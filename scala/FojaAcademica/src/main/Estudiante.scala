@@ -14,7 +14,6 @@ class Estudiante {
 	}
 	
 	// Promedio de todas las notas
-	// TODO: que pasa con las materias que abandona??
 	def promedioConAplazos:Float = {
 		promedio(notas.toList)
 	}
@@ -32,11 +31,9 @@ class Estudiante {
 	}
 	
 	// Devuelve una lista de notas de todas sus cursadas
+	// No se toman en cuenta las materias que abandona
 	def notas:ListBuffer[Int] = {
-		var ret:ListBuffer[Int] = ListBuffer()
-				
-		cursadas.foreach { cursada => ret += cursada.nota }
-		ret
+		cursadas.filter(x => x.getTerminada).map(x => x.nota)
 	}
 	
 	// Devuelve el promedio de notas de toda la lista
@@ -64,6 +61,10 @@ class Estudiante {
 		}
 	}
 	
+	def cantidadDeCursadasDesaprobadas:Int = {
+			cursadas.toList.filter(x => ! x.estaAprobada && x.getTerminada).length
+	}
+	
 	def cantidadDeCursadasAbandonadas:Int = {
 		var ret:Int = 0
 		cursadas.foreach { cursada =>
@@ -84,7 +85,7 @@ class Estudiante {
 	
 	def tablaNotas:Map[Int, Int] = {
 		var retMap:Map[Int, Int] = Map()
-		for(nota <- 0 to 10) {
+		for(nota <- 1 to 10) {
 			retMap = retMap + (nota -> notas.toList.count(_ == nota))
 		}
 		
@@ -119,11 +120,15 @@ object main extends App {
 	var cursada3:Cursada = new Cursada()
 	mariano addCursada cursada3
 	
+	var cursada4:Cursada = new Cursada(2)
+	mariano addCursada cursada4
+	
 	
 	println("Notas", mariano.notas)
 	println("Promedio sin aplazos", mariano.promedioSinAplazos)
 	println("Promedio con aplazos", mariano.promedioConAplazos)
 	println("Cursadas aprobadas", mariano.cantidadDeCursadasAprobadas)
+	println("Cursadas desaprobadas", mariano.cantidadDeCursadasDesaprobadas)
 	println("Cursadas abandonadas", mariano.cantidadDeCursadasAbandonadas)
 	println("Porcentaje de cursadas aprobadas sobre iniciadas", mariano.cursosAprobadosSobreIniciados)
 	println("Tabla de notas", mariano.tablaNotas)

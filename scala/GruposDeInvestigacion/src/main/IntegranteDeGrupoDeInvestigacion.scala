@@ -1,8 +1,10 @@
-package ejercicio3
+package main
+
+import scala.collection.mutable.ListBuffer
 
 class IntegranteDeGrupoDeInvestigacion {
 
-  var eventosEnLosQueParticipa : ListBuffe[String] = ListBuffer()
+  var eventosEnLosQueParticipa : ListBuffer[String] = ListBuffer()
   
   def getEventosEnLosQueParticipa = eventosEnLosQueParticipa
   def addEventoEnElQueParticipa(evento : String) = eventosEnLosQueParticipa += evento
