@@ -1,4 +1,6 @@
+/target
 /bin
 /.settings
 /.cache
 /.classpath
+/.project

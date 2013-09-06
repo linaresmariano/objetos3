@@ -13,7 +13,7 @@ class GrupoDeInvestigacion {
 	def addActividad(actividad : ActividadDeGrupo) = actividades += actividad
 	
 	def getActividadesAunNoAprobadas = actividades.filter(actividad => (actividad.getFechaDeAprobacionDeLaActividad == null))
-	def getMontoTotalDeFinanciamientoDeActividadesAunNoAprobadas = getActividadesAunNoAprobadas.map( actividad => actividad.getMontoTotalDeFinanciamiento).sum
+	def getMontoTotalDeFinanciamientoDeActividadesAunNoAprobadas = getActividadesAunNoAprobadas.map( actividad => actividad.montoTotalDeFinanciamiento).sum
 
 	def getArticulosPublicados = actividades.filter(actividad => actividad.esArticulo)
 	
