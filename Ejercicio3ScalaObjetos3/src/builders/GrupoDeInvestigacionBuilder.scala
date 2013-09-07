@@ -8,6 +8,11 @@ class GrupoDeInvestigacionBuilder {
 
 	var integrantes : ListBuffer[IntegranteDeGrupoDeInvestigacion] = new ListBuffer()
 	
+	def withIntegrantes(integrantes : ListBuffer[IntegranteDeGrupoDeInvestigacion]) : GrupoDeInvestigacionBuilder = {
+	  	this.integrantes = integrantes
+	  	return this
+	}
+	
 	def build() = new GrupoDeInvestigacion(this.integrantes)
   
 }

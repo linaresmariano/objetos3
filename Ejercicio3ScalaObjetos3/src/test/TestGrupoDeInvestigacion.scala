@@ -8,12 +8,53 @@ import builders.CharlaBuilder
 import builders.GrupoDeInvestigacionBuilder
 import model.GrupoDeInvestigacion
 import builders.ProyectoBuilder
+import model.IntegranteDeGrupoDeInvestigacion
 
 class TestGrupoDeInvestigacion {
 
 	@Test
+	def testAddActividad{
+		
+		var charlaBuilder : CharlaBuilder = new CharlaBuilder()  
+		var actividad1 : ActividadDeGrupo = charlaBuilder.build()
+	  
+		var integrantes : ListBuffer[IntegranteDeGrupoDeInvestigacion] = ListBuffer()
+		var integrante1 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		var integrante2 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		var integrante3 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		var integrante4 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		
+		integrantes+=integrante1
+		integrantes+=integrante2
+		integrantes+=integrante3
+		integrantes+=integrante4
+		
+		var grupo : GrupoDeInvestigacion = new GrupoDeInvestigacionBuilder().withIntegrantes(integrantes).build()
+		grupo.addActividad(actividad1)
+		
+		assertTrue(grupo.getActividades.contains(actividad1))
+		assertTrue(integrante1.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante2.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante3.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante4.getActividadesEnLasQueParticipa.contains(actividad1))
+		
+	}
+  
+	@Test
 	def testAddActividades{
 		
+		var integrantes : ListBuffer[IntegranteDeGrupoDeInvestigacion] = ListBuffer()
+		var integrante1 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		var integrante2 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		var integrante3 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		var integrante4 : IntegranteDeGrupoDeInvestigacion = new IntegranteDeGrupoDeInvestigacion()
+		
+		integrantes+=integrante1
+		integrantes+=integrante2
+		integrantes+=integrante3
+		integrantes+=integrante4
+	  
+	  
 		var charlaBuilder : CharlaBuilder = new CharlaBuilder()
 	  
 		var actividad1 : ActividadDeGrupo = charlaBuilder.build()
@@ -31,10 +72,26 @@ class TestGrupoDeInvestigacion {
 		actividades+=actividad3
 		actividades+=actividad4
 	  
-		var grupo : GrupoDeInvestigacion = new GrupoDeInvestigacionBuilder().build()
+		var grupo : GrupoDeInvestigacion = new GrupoDeInvestigacionBuilder().withIntegrantes(integrantes).build()
 		grupo.addActividades(actividades)
 
 		assertEquals(grupo.getActividades.size, 4)
+		assertTrue(integrante1.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante2.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante3.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante4.getActividadesEnLasQueParticipa.contains(actividad1))
+		assertTrue(integrante1.getActividadesEnLasQueParticipa.contains(actividad2))
+		assertTrue(integrante2.getActividadesEnLasQueParticipa.contains(actividad2))
+		assertTrue(integrante3.getActividadesEnLasQueParticipa.contains(actividad2))
+		assertTrue(integrante4.getActividadesEnLasQueParticipa.contains(actividad2))
+		assertTrue(integrante1.getActividadesEnLasQueParticipa.contains(actividad3))
+		assertTrue(integrante2.getActividadesEnLasQueParticipa.contains(actividad3))
+		assertTrue(integrante3.getActividadesEnLasQueParticipa.contains(actividad3))
+		assertTrue(integrante4.getActividadesEnLasQueParticipa.contains(actividad3))
+		assertTrue(integrante1.getActividadesEnLasQueParticipa.contains(actividad4))
+		assertTrue(integrante2.getActividadesEnLasQueParticipa.contains(actividad4))
+		assertTrue(integrante3.getActividadesEnLasQueParticipa.contains(actividad4))
+		assertTrue(integrante4.getActividadesEnLasQueParticipa.contains(actividad4))
 		
 	}
   

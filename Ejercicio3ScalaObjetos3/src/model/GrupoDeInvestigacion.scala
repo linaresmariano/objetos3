@@ -9,9 +9,15 @@ class GrupoDeInvestigacion(val integrantes : ListBuffer[IntegranteDeGrupoDeInves
 	def addIntegrante(integrante : IntegranteDeGrupoDeInvestigacion) = integrantes += integrante
 	
 	def getActividades = this.actividades
-	def addActividad(actividad : ActividadDeGrupo) = this.actividades+=(actividad)
-	def addActividades(actividades : ListBuffer[ActividadDeGrupo]) = this.actividades++=(actividades)
 	
+	def addActividad(actividad : ActividadDeGrupo) = {
+	  	this.actividades+=(actividad)
+	  	this.integrantes.map(integrante => integrante.participarEnUnaActividad(actividad))
+	}
+	
+	def addActividades(actividades : ListBuffer[ActividadDeGrupo]) = {
+		actividades.map(actividad => this.addActividad(actividad))
+	}
 	def getActividadesAunNoAprobadas  : ListBuffer[ActividadDeGrupo] = this.actividades.filter(actividad => (!actividad.aprobada))
 	
 	def getMontoTotalDeFinanciamientoDeActividadesAunNoAprobadas : Integer = this.getActividadesAunNoAprobadas.map( actividad => actividad.montoTotalDeFinanciamiento).sum

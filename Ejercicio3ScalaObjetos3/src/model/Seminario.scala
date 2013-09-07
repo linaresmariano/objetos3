@@ -10,4 +10,6 @@ class Seminario(nombreDeLaActividad : String , montoTotalDeFinanciamiento : Inte
   def getSesiones = sesiones
   def addSesion(sesion : SesionDeSeminario) = sesiones += sesion
   
+  def nombresDeSesiones : ListBuffer[String] = this.sesiones.map(sesion => sesion.nombreDeLaActividad)
+  
 }

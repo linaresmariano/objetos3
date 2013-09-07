@@ -14,6 +14,8 @@ class Proyecto(val detallesDeResultado : String,nombreDeLaActividad : String , m
 	def getExperimentosHechosOPorHacer = experimentosHechosOPorHacer
 	def addExperimentoHechoOPorHacer(experimento : Experimento) = experimentosHechosOPorHacer += experimento
   
+	def detallesDeExperimentos : ListBuffer[String] = experimentosHechosOPorHacer.map(experimento => experimento.descripcion)
+	
 	override def esArticulo : Boolean = detallesDeResultado.contains("articulo")
   
 }

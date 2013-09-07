@@ -22,5 +22,10 @@ class CharlaBuilder {
 	  return this
 	}
 	
+	def withNombreDeLaActividad(nombreDeLaActividad : String) : CharlaBuilder = {
+		this.nombreDeLaActividad = nombreDeLaActividad
+		return this
+	}
+	
 	def build() : Charla  = return new Charla(this.cantidadEstimadaDePublico, this.fechaDeCharla,  this.horaComienzoDeCharla, this.horaFinDeCharla,this.nombreDeLaActividad  , this.montoTotalDeFinanciamiento  ,this.responsable , this.grupoOrganizadorDeLaActividad , this.fechaDePresentacionDeLaActividadALaUniversidad )
 }
