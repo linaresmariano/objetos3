@@ -83,6 +83,7 @@ class Estudiante {
 		return 100
 	}
 	
+	// Devuelve un map de Nota -> Cantidad
 	def tablaNotas:Map[Int, Int] = {
 		var retMap:Map[Int, Int] = Map()
 		for(nota <- 1 to 10) {
@@ -90,6 +91,19 @@ class Estudiante {
 		}
 		
 		retMap
+	}
+	
+	
+	def notaMasAltaSuperadaAlMenos(nVeces: Int): Int = {
+		var cant:Int = 0
+		
+		for(nota <- (1 to 10).reverse) {
+			cant += notas.toList.count(_ == nota)
+			if(cant >= nVeces)
+				return nota
+		}
+		
+		return 0
 	}
 	
 	def notaMasAltaAlMenos(nVeces:Int):Int = {
@@ -132,5 +146,6 @@ object main extends App {
 	println("Cursadas abandonadas", mariano.cantidadDeCursadasAbandonadas)
 	println("Porcentaje de cursadas aprobadas sobre iniciadas", mariano.cursosAprobadosSobreIniciados)
 	println("Tabla de notas", mariano.tablaNotas)
-	println("Nota mas alta al menos N veces", mariano.notaMasAltaAlMenos(1))
+	println("Nota mas alta al menos N veces", mariano.notaMasAltaAlMenos(2))
+	println("Nota mas alta N veces", mariano.notaMasAltaSuperadaAlMenos(2))
 }
