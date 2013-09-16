@@ -1,8 +1,7 @@
-package main
+package model
 
 import scala.collection.mutable.ListBuffer
 import scala.collection.immutable.Nil
-import java.util.Calendar
 
 class Persona {
 

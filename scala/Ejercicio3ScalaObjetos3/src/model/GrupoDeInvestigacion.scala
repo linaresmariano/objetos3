@@ -1,10 +1,9 @@
-package main
+package model
 
 import scala.collection.mutable.ListBuffer
 
-class GrupoDeInvestigacion {
+class GrupoDeInvestigacion(val integrantes : ListBuffer[Persona]) {
 	val actividades:ListBuffer[Actividad] = ListBuffer()
-	val integrantes:ListBuffer[Persona] = ListBuffer()
 	
 	def actividadesPresentadasPendientesDeAprobacion: ListBuffer[Actividad] = {
 		actividades.filter(actividad => (actividad.estaPresentada && !actividad.estaAprobada))
@@ -14,7 +13,7 @@ class GrupoDeInvestigacion {
 		acts.map( actividad => actividad.montoDeFinanciamiento).sum
 	}
 	
-	def getArticulosPublicados: ListBuffer[Actividad] = {
+	def getArticulos: ListBuffer[Actividad] = {
 		actividades.filter(actividad => actividad.esArticulo)
 	}
 }

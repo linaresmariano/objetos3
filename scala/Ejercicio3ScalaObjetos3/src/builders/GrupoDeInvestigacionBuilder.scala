@@ -1,14 +1,16 @@
 package builders
 
 import scala.collection.mutable.ListBuffer
-import model.IntegranteDeGrupoDeInvestigacion
 import model.GrupoDeInvestigacion
+import model.Persona
+
+
 
 class GrupoDeInvestigacionBuilder {
 
-	var integrantes : ListBuffer[IntegranteDeGrupoDeInvestigacion] = new ListBuffer()
+	var integrantes : ListBuffer[Persona] = new ListBuffer()
 	
-	def withIntegrantes(integrantes : ListBuffer[IntegranteDeGrupoDeInvestigacion]) : GrupoDeInvestigacionBuilder = {
+	def withIntegrantes(integrantes : ListBuffer[Persona]) : GrupoDeInvestigacionBuilder = {
 	  	this.integrantes = integrantes
 	  	return this
 	}
