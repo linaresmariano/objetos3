@@ -1,8 +1,7 @@
-package main
+package model
 
 import scala.collection.mutable.ListBuffer
 import scala.collection.immutable.Nil
-import java.util.Calendar
 
 class Persona {
 
@@ -15,8 +14,8 @@ class Persona {
   }
 
   def eventosEnLosQueParticipa: ListBuffer[DetalleEvento] = {
-	actividades.foldLeft(ListBuffer(): ListBuffer[DetalleEvento]) { (detalles, act) =>
-	    detalles ++= act.detalleDeEventos
+		var detallesDeEeventos = actividades.foldLeft(ListBuffer(): ListBuffer[DetalleEvento]) { (detalles, act) => detalles ++= act.detalleDeEventos}
+	    detallesDeEeventos.sortWith((detalle1,detalle2) => detalle1.fechaDesde.isBefore(detalle2.fechaDesde))
 	}
-  }
+  
 }

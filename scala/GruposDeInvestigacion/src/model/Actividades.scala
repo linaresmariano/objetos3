@@ -1,7 +1,7 @@
-package main
+package model
 
 import scala.collection.mutable.ListBuffer
-import java.util.Calendar
+import org.joda.time.DateTime
 
 
 ////////////////////////
@@ -11,10 +11,10 @@ class Proyecto(nombre: String, responsable: Persona, montoDeFinanciamiento: Int,
 				extends Actividad(nombre, responsable, montoDeFinanciamiento, grupo) {
 
   
-	val resultados:Map[Calendar, String] = Map()
+	var resultados:Map[DateTime, String] = Map()
 	val experimentos:ListBuffer[DetalleEvento] = ListBuffer()
 	
-	override def esArticulo: Boolean = resultados.exists( x => (x._2.contains("articulo")))
+	override def esArticulo: Boolean = resultados.values.exists( x => (x.contains("articulo")))
 	
 	override def detalleDeEventos: ListBuffer[DetalleEvento] = experimentos
 }
@@ -34,13 +34,13 @@ class Seminario(nombre: String, responsable: Persona, montoDeFinanciamiento: Int
 	}
 }
 
-class Sesion(val fechaDesde:Calendar, val fechaHasta:Calendar) {}
+class Sesion(val fechaDesde:DateTime, val fechaHasta:DateTime) {}
 
 ////////////////////////
 //      Charla
 ////////////////////////
 class Charla(nombre: String, responsable: Persona, montoDeFinanciamiento: Int, grupo: GrupoDeInvestigacion,
-		val cantidadPublico: Int, val fechaDesde: Calendar, val fechaHasta: Calendar)
+		val cantidadPublico: Int, val fechaDesde: DateTime, val fechaHasta: DateTime)
 				extends Actividad(nombre, responsable, montoDeFinanciamiento, grupo) {
   
 	override def detalleDeEventos: ListBuffer[DetalleEvento] = {
@@ -52,4 +52,4 @@ class Charla(nombre: String, responsable: Persona, montoDeFinanciamiento: Int, g
 ///////////////////////////////
 //      Detalle del evento
 ///////////////////////////////
-class DetalleEvento(val fechaDesde: Calendar, val fechaHasta: Calendar, val descripcion: String) {}
+class DetalleEvento(val fechaDesde: DateTime, val fechaHasta: DateTime, val descripcion: String) {}
