@@ -1,22 +1,68 @@
 package test
-
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.Before
-import scala.collection.mutable.ListBuffer
 import org.mockito.Mockito._
+import builders.GrupoDeInvestigacionBuilder
 import model.Seminario
-import model.Actividad
 import model.Charla
 import model.Proyecto
 import model.GrupoDeInvestigacion
+import scala.collection.mutable.ListBuffer
+import model.Actividad
 import model.Persona
 import model.DetalleEvento
 
+class TestPersona {
+
+	@Test
+	def testActividades{
+	  
+		var actividad1  = mock(classOf[Charla])
+
+		var actividad2 = mock(classOf[Proyecto])
+
+		var actividad3 = mock(classOf[Seminario])
 
 
-class TestIntegranteDeGrupoDeInvestigacion {
+		var actividades1 : ListBuffer[Actividad] = ListBuffer()
+		actividades1+=actividad1
+		actividades1+=actividad2
+		actividades1+=actividad3
+	  
+		var grupo1 : GrupoDeInvestigacion = new GrupoDeInvestigacionBuilder().build()
+		grupo1.actividades ++= actividades1
+		
+		
+		var actividad4  = mock(classOf[Charla])
 
+		var actividad5 = mock(classOf[Proyecto])
+
+		var actividad6 = mock(classOf[Seminario])
+
+
+		var actividades2 : ListBuffer[Actividad] = ListBuffer()
+		actividades2+=actividad4
+		actividades2+=actividad5
+		actividades2+=actividad6
+	  
+		var grupo2 : GrupoDeInvestigacion = new GrupoDeInvestigacionBuilder().build()
+		grupo2.actividades ++= actividades2
+		
+		var  persona : Persona = new Persona()
+		persona.grupos += grupo1
+		persona.grupos += grupo2
+		
+		assertTrue(persona.actividades.contains(actividad1))
+		assertTrue(persona.actividades.contains(actividad2))
+		assertTrue(persona.actividades.contains(actividad3))
+		assertTrue(persona.actividades.contains(actividad4))
+		assertTrue(persona.actividades.contains(actividad5))
+		assertTrue(persona.actividades.contains(actividad6))
+		
+	  
+	}
+	
 	@Test
 	def testGetEventosEnLosQueParticipa {
 	  
@@ -84,6 +130,5 @@ class TestIntegranteDeGrupoDeInvestigacion {
 		assertTrue(eventosEnLosQueParticipa.contains(detalleEvento2Act3G1))
 		assertTrue(eventosEnLosQueParticipa.contains(detalleEvento3Act3G1))
 	}
-	
   
 }
