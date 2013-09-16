@@ -12,6 +12,7 @@ import scala.collection.mutable.ListBuffer
 import model.Actividad
 import model.Persona
 import model.DetalleEvento
+import org.joda.time.DateTime
 
 class TestPersona {
 
@@ -70,6 +71,7 @@ class TestPersona {
 		var actividad1g1  = mock(classOf[Charla])
 		//inicializacion de detalles de eventos
 		var detalleEvento1Act1G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento1Act1G1.fechaDesde).thenReturn(new DateTime(2010))
 		//detalles de eventos
 		var detalleDeEventosAct1G1 : ListBuffer[DetalleEvento] = ListBuffer()
 		detalleDeEventosAct1G1 += detalleEvento1Act1G1
@@ -79,8 +81,11 @@ class TestPersona {
 		var actividad2g1 = mock(classOf[Proyecto])
 		//inicializacion de detalles de eventos
 		var detalleEvento1Act2G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento1Act2G1.fechaDesde).thenReturn(new DateTime(2001))
 		var detalleEvento2Act2G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento2Act2G1.fechaDesde).thenReturn(new DateTime(2002))
 		var detalleEvento3Act2G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento3Act2G1.fechaDesde).thenReturn(new DateTime(2003))
 	
 		//detalles de eventos
 		var detalleDeEventosAct2G1 : ListBuffer[DetalleEvento] = ListBuffer()
@@ -94,8 +99,11 @@ class TestPersona {
 		var actividad3g1 = mock(classOf[Seminario])
 		//inicializacion de detalles de eventos
 		var detalleEvento1Act3G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento1Act3G1.fechaDesde).thenReturn(new DateTime(2004))
 		var detalleEvento2Act3G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento2Act3G1.fechaDesde).thenReturn(new DateTime(2005))
 		var detalleEvento3Act3G1 = mock(classOf[DetalleEvento])
+		when(detalleEvento3Act3G1.fechaDesde).thenReturn(new DateTime(2006))
 		//detalles de eventos
 		var detalleDeEventosAct3G1 : ListBuffer[DetalleEvento] = ListBuffer()
 		detalleDeEventosAct3G1 += detalleEvento1Act3G1
@@ -129,6 +137,14 @@ class TestPersona {
 		assertTrue(eventosEnLosQueParticipa.contains(detalleEvento1Act3G1))
 		assertTrue(eventosEnLosQueParticipa.contains(detalleEvento2Act3G1))
 		assertTrue(eventosEnLosQueParticipa.contains(detalleEvento3Act3G1))
+		
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento1Act1G1),6)
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento1Act2G1),0)
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento2Act2G1),1)
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento3Act2G1),2)
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento1Act3G1),3)
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento2Act3G1),4)
+		assertEquals(eventosEnLosQueParticipa.indexOf(detalleEvento3Act3G1),5)
 	}
   
 }
