@@ -2,6 +2,7 @@ package model
 
 import scala.collection.mutable.ListBuffer
 import org.joda.time.DateTime
+import mixines.VerificadorDeAula
 
 
 ////////////////////////
@@ -23,9 +24,15 @@ class Proyecto(nombre: String, responsable: Persona, montoDeFinanciamiento: Int,
 //      Seminario
 ////////////////////////
 class Seminario(nombre: String, responsable: Persona, montoDeFinanciamiento: Int, grupo: GrupoDeInvestigacion)
-				extends Actividad(nombre, responsable, montoDeFinanciamiento, grupo) {
+				extends Actividad(nombre, responsable, montoDeFinanciamiento, grupo) with VerificadorDeAula {
   
 	val sesiones:ListBuffer[Sesion] = ListBuffer()
+	
+	def usaCanion : Boolean = true
+	def usaMicrofono : Boolean = true
+	def usaAireAcondicionado : Boolean = true
+	def usaEstabilizador : Boolean = true
+	def tamanioMinimoDePizarron : (Int,Int) = (2,5)
 	
 	override def detalleDeEventos: ListBuffer[DetalleEvento] = {
 		sesiones.foldLeft(ListBuffer(): ListBuffer[DetalleEvento]) { (acum, sesion) =>
@@ -41,7 +48,13 @@ class Sesion(val fechaDesde:DateTime, val fechaHasta:DateTime) {}
 ////////////////////////
 class Charla(nombre: String, responsable: Persona, montoDeFinanciamiento: Int, grupo: GrupoDeInvestigacion,
 		val cantidadPublico: Int, val fechaDesde: DateTime, val fechaHasta: DateTime)
-				extends Actividad(nombre, responsable, montoDeFinanciamiento, grupo) {
+				extends Actividad(nombre, responsable, montoDeFinanciamiento, grupo) with VerificadorDeAula {
+  
+	def usaCanion : Boolean = true
+	def usaMicrofono : Boolean = true
+	def usaAireAcondicionado : Boolean = false
+	def usaEstabilizador : Boolean = false
+	def tamanioMinimoDePizarron : (Int,Int) = (2,5)
   
 	override def detalleDeEventos: ListBuffer[DetalleEvento] = {
 		ListBuffer(new DetalleEvento(this.fechaDesde, this.fechaHasta, this.nombre))
