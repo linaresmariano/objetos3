@@ -10,16 +10,16 @@ trait VerificadorDeAula {
 	def usaEstabilizador : Boolean
 	def tamanioMinimoDePizarron : (Int,Int)
   
-	def checkRecurso(aula : Aula, usaRecurso : Boolean, aulaTieneRecurso: Boolean) : Boolean = {
+	def checkRecurso( usaRecurso : Boolean, aulaTieneRecurso: Boolean) : Boolean = {
 	  	var checkRecurso : Boolean = true
 	  	if(usaRecurso){checkRecurso = aulaTieneRecurso}
 	  	return checkRecurso
 	}
 	
-	def checkCanion(aula : Aula) : Boolean = this.checkRecurso(aula,this.usaMicrofono,aula.tieneMicrofono)
-	def checkMicrofono(aula : Aula) : Boolean = this.checkRecurso(aula,this.usaMicrofono,aula.tieneMicrofono)
-	def checkAireAcondicionado(aula : Aula) : Boolean = this.checkRecurso(aula,this.usaAireAcondicionado,aula.tieneAireAcondicionado)
-	def checkEstabilizador(aula : Aula) : Boolean = this.checkRecurso(aula,this.usaEstabilizador,aula.tieneEstabilizador)
+	def checkCanion(aula : Aula) : Boolean = this.checkRecurso(this.usaCanion,aula.tieneCanion)
+	def checkMicrofono(aula : Aula) : Boolean = this.checkRecurso(this.usaMicrofono,aula.tieneMicrofono)
+	def checkAireAcondicionado(aula : Aula) : Boolean = this.checkRecurso(this.usaAireAcondicionado,aula.tieneAireAcondicionado)
+	def checkEstabilizador(aula : Aula) : Boolean = this.checkRecurso(this.usaEstabilizador,aula.tieneEstabilizador)
 	def checkTamanioMinimoDePizarron(aula : Aula) : Boolean = aula.tieneTamanioMinimoDePizarron(tamanioMinimoDePizarron)
 	
 	def meSirve(aula : Aula) : Boolean = {
