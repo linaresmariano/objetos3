@@ -5,14 +5,26 @@ import org.junit.Test
 import org.junit.Before
 import main.Estudiante
 import main.Cursada
+import main.Curso
 
 class EstudianteTest {
+	val obj3 = new Curso("Objectos3")
+	val des = new Curso("Desarrollo")
+	val tvd = new Curso("TVD")
+	val tti = new Curso("TTI")
+	val labo = new Curso("Laboratorio")
+	
 	val estudiante:Estudiante = new Estudiante()
 	val cursada:Cursada = new Cursada(8)
+	cursada.curso = obj3
 	val cursada1:Cursada = new Cursada(10)
+	cursada1.curso = des
 	val cursada2:Cursada = new Cursada(2)
+	cursada2.curso = tvd
 	val cursada3:Cursada = new Cursada()
+	cursada3.curso = tti
 	val cursada4:Cursada = new Cursada(2)
+	cursada4.curso = labo
 
 	@Test
 	def testPromedioSinAplasosSinNotas = {
@@ -66,5 +78,15 @@ class EstudianteTest {
 		assertEquals(estudiante.promedioConAplazos, 5.0, 0.01f)
 	}
 	
+	@Test
+	def testFiltrarCursosPorAnio2013 = {
+		initializeEstudiante
+		assertEquals(estudiante.filtrarCursosPorAnio(2013), List(obj3, des, tvd, tti, labo))
+	}
 	
+	@Test
+	def testFiltrarCursosPorAnio2014 = {
+		initializeEstudiante
+		assertEquals(estudiante.filtrarCursosPorAnio(2014), List())
+	}
 }

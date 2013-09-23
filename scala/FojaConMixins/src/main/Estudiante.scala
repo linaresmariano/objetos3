@@ -25,19 +25,19 @@ object estudia extends App {
 	mariano addCursada cursada
 	
 	val cursada1:Cursada = new Cursada(10)
-	cursada1.curso = new Curso("Objectos2")
+	cursada1.curso = new Curso("Desarrollo")
 	mariano addCursada cursada1
 	
 	val cursada2:Cursada = new Cursada(2)
-	cursada2.curso = new Curso("Objectos1")
+	cursada2.curso = new Curso("TVD")
 	mariano addCursada cursada2
 	
 	val cursada3:Cursada = new Cursada()
-	cursada3.curso = new Curso("Objectos4")
+	cursada3.curso = new Curso("TTI")
 	mariano addCursada cursada3
 	
 	val cursada4:Cursada = new Cursada(2)
-	cursada4.curso = new Curso("Objectos5")
+	cursada4.curso = new Curso("Laboratorio")
 	mariano addCursada cursada4
 	
 	
@@ -51,5 +51,5 @@ object estudia extends App {
 	println("Tabla de notas", mariano.tablaNotas)
 	println("Nota mas alta al menos N veces", mariano.notaMasAltaAlMenos(2))
 	println("Nota mas alta N veces", mariano.notaMasAltaSuperadaAlMenos(2))
-	println("Cursos del 2013", mariano.filtrar(2013))
+	println("Cursos del 2013", mariano.filtrarCursosPorAnio(2013))
 }

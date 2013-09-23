@@ -2,9 +2,13 @@ package main
 
 import scala.collection.mutable.ListBuffer
 
-class Profesor(unNombre:String) extends Grupal with CalculaEstadistica with FiltrarCursosPorAnio {
-	val nombre = unNombre
+class Profesor(val nombre:String) extends Grupal with CalculaEstadistica with FiltrarCursosPorAnio {
+
 	val cursosBuffer:ListBuffer[Curso] = new ListBuffer()
+	
+	def addCurso(curso:Curso) = {
+		cursosBuffer += curso
+	}
 	
 	def cursos:List[Curso] = cursosBuffer.toList
 	

@@ -4,7 +4,7 @@ trait FiltrarCursosPorAnio {
   
 	def cursos:List[Curso]
 	
-	def filtrar(anio:Int) = {
+	def filtrarCursosPorAnio(anio:Int) = {
 	  	cursos.filter(curso => curso.anio.equals(anio))
 	}
 }
