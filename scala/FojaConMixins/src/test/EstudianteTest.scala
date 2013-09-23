@@ -79,6 +79,36 @@ class EstudianteTest {
 	}
 	
 	@Test
+	def testCantidadDeCursadasAprobadas = {
+		initializeEstudiante
+		assertEquals(estudiante.cantidadDeCursadasAprobadas, 2)
+	}
+	
+	@Test
+	def testCantidadDeCursadasDesaprobadas = {
+		initializeEstudiante
+		assertEquals(estudiante.cantidadDeCursadasDesaprobadas, 2)
+	}
+	
+	@Test
+	def testCantidadDeCursadasAbandonadas = {
+		initializeEstudiante
+		assertEquals(estudiante.cantidadDeCursadasAbandonadas, 1)
+	}
+	
+	@Test
+	def testNotaMasAltaSuperadaAlMenos = {
+		initializeEstudiante
+		assertEquals(estudiante.notaMasAltaSuperadaAlMenos(2), 8)
+	}
+
+	@Test
+	def testCursosAprobadosSobreIniciados = {
+		initializeEstudiante
+		assertEquals(estudiante.cursosAprobadosSobreIniciados, 40f, 0.01f)
+	}
+	
+	@Test
 	def testFiltrarCursosPorAnio2013 = {
 		initializeEstudiante
 		assertEquals(estudiante.filtrarCursosPorAnio(2013), List(obj3, des, tvd, tti, labo))
