@@ -6,8 +6,11 @@ import org.mockito.Mockito._
 import model.Aula
 import model.Seminario
 import builders.SeminarioBuilder
+import model.Sesion
 
 class TestSeminario {
+  
+  
 	@Test
 	def testMeSirveShouldBeFalse {
 	  
