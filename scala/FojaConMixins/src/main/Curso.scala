@@ -2,7 +2,11 @@ package main
 
 import scala.collection.mutable.ListBuffer
 
-class Curso(val nombre:String, val materia:Materia) extends CalculaEstadistica {
+class Curso(val nombre:String, val materia:Materia, val anio:Int) extends CalculaEstadistica {
+  	def this(nombre:String) = {
+	  this(nombre, null, 2013)
+	}
+  	
 	val docentes:ListBuffer[Profesor] = new ListBuffer()
 	val cursadasBuffer:ListBuffer[Cursada] = new ListBuffer()
 	
@@ -10,7 +14,10 @@ class Curso(val nombre:String, val materia:Materia) extends CalculaEstadistica {
 	
 	def addCursada(cursada:Cursada) = {
 		cursadasBuffer += cursada
+		cursada.curso = this
 	}
+	
+	override def toString:String = nombre
 }
 
 
@@ -37,7 +44,7 @@ object curso extends App {
 	sergio addCursada cursada
 	sergio addCursada cursada
 	
-	val curso1:Curso = new Curso("Objetos3", new Materia(new Carrera("TPI")))
+	val curso1:Curso = new Curso("Objetos3", new Materia(new Carrera("TPI")), 2013)
 	//curso1.addAlumno(mariano)
 	//curso1.addAlumno(sergio)
 	

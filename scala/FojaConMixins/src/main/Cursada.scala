@@ -2,7 +2,7 @@ package main
 
 import scala.collection.mutable.ListBuffer
 
-class Cursada(unCurso:Curso) {
+class Cursada(var curso:Curso) {
 	def this() = {
 	  this(null)
 	}
@@ -13,7 +13,12 @@ class Cursada(unCurso:Curso) {
 	  this.setTerminada(true)
 	}
 	
-	val curso = unCurso
+	def this(unaNota:Int, unCurso:Curso) = {
+	  this(unCurso)
+	  this.setNota(unaNota)
+	  this.setTerminada(true)
+	}
+	
 	var terminada:Boolean = false
 	var nota:Int = 0
 	
