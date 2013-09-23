@@ -4,24 +4,12 @@ import scala.collection.mutable.ListBuffer
 
 class Curso(val nombre:String, val materia:Materia) extends CalculaEstadistica {
 	val docentes:ListBuffer[Profesor] = new ListBuffer()
-	val alumnos:ListBuffer[Estudiante] = new ListBuffer()
+	val cursadasBuffer:ListBuffer[Cursada] = new ListBuffer()
 	
-	// Fijarse las notas de este curso de cada alumno! NO en todas
-	def notas:List[Int] = {
-		alumnos.foldLeft(ListBuffer(): ListBuffer[Int]) { (acum, alumno) =>
-			acum ++= alumno.notas
-		}.toList
-	}
-
-	// Fijarse las notas de este curso de cada alumno! NO en todas
-	def notasSinAplazos:List[Int] = {
-		alumnos.foldLeft(ListBuffer(): ListBuffer[Int]) { (acum, alumno) =>
-			acum ++= alumno.notasSinAplazos
-		}.toList
-	}
+	override def cursadas:List[Cursada] = cursadasBuffer.toList
 	
-	def addAlumno(alumno:Estudiante) = {
-		alumnos += alumno
+	def addCursada(cursada:Cursada) = {
+		cursadasBuffer += cursada
 	}
 }
 
@@ -50,8 +38,8 @@ object curso extends App {
 	sergio addCursada cursada
 	
 	val curso1:Curso = new Curso("Objetos3", new Materia(new Carrera("TPI")))
-	curso1.addAlumno(mariano)
-	curso1.addAlumno(sergio)
+	//curso1.addAlumno(mariano)
+	//curso1.addAlumno(sergio)
 	
 	println("Notas del curso", curso1.notas)
 	println("Promedio sin aplazos del curso", curso1.promedioSinAplazos)

@@ -24,14 +24,3 @@ class Cursada(unCurso:Curso) {
 	def setNota(value:Int) = nota = value
 }
 
-class Materia(unaCarrera:Carrera) {
-	val carrera = unaCarrera
-}
-
-class Carrera(unNombre:String) {
-	val nombre = unNombre
-}
-
-class Profesor(unNombre:String) {
-	val nombre = unNombre
-}
