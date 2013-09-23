@@ -11,5 +11,5 @@ class Aula(val metrosCuadradosDePizzarron : (Int,Int), val capacidad : Int) {
 	def tieneMicrofono : Boolean = this.tieneRecurso("Microfono")
 	def tieneAireAcondicionado : Boolean = this.tieneRecurso("AireAcondicionado")
 	def tieneEstabilizador : Boolean = this.tieneRecurso("Estabilizador")
-	def tieneTamanioMinimoDePizarron( tamaño : (Int,Int)) : Boolean = this.metrosCuadradosDePizzarron._1 >= tamaño._1 && this.metrosCuadradosDePizzarron._2 >= tamaño._2
+	def tieneTamanioMinimoDePizarron( size : (Int,Int)) : Boolean = this.metrosCuadradosDePizzarron._1 >= size._1 && this.metrosCuadradosDePizzarron._2 >= size._2
 }
