@@ -12,7 +12,7 @@ class CursoTest {
 	val cursada1:Cursada = new Cursada(10)
 	val cursada2:Cursada = new Cursada(2)
 	val cursada3:Cursada = new Cursada()
-	val cursada4:Cursada = new Cursada(2)	
+	val cursada4:Cursada = new Cursada(2)
   	
 	val curso:Curso = new Curso("Objetos3")
 	
@@ -43,7 +43,7 @@ class CursoTest {
 	}
 	
 	
-	def initializeEstudiante = {
+	def initializeCurso = {
 		curso addCursada cursada
 		curso addCursada cursada1
 		curso addCursada cursada2
@@ -53,49 +53,62 @@ class CursoTest {
 	
 	@Test
 	def testNotas = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.notas, List(8, 10, 2, 2))
 	}
 	
 	@Test
 	def testPromedioSinAplazos = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.promedioSinAplazos, 9.0, 0.01f)
 	}
 	
 	@Test
 	def testPromedioConAplazos = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.promedioConAplazos, 5.0, 0.01f)
 	}
 	
 	@Test
 	def testCantidadDeCursadasAprobadas = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.cantidadDeCursadasAprobadas, 2)
 	}
 	
 	@Test
 	def testCantidadDeCursadasDesaprobadas = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.cantidadDeCursadasDesaprobadas, 2)
 	}
 	
 	@Test
 	def testCantidadDeCursadasAbandonadas = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.cantidadDeCursadasAbandonadas, 1)
 	}
 	
 	@Test
 	def testNotaMasAltaSuperadaAlMenos = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.notaMasAltaSuperadaAlMenos(2), 8)
+	}
+	
+	@Test
+	def testTablaNotas = {
+		initializeCurso
+		assertEquals(curso.tablaNotas, Map(1 -> 0, 2 -> 2, 3 -> 0, 4 -> 0, 5 -> 0, 6 -> 0, 7 -> 0, 8 -> 1, 9 -> 0, 10 -> 1))
+	}
+	
+	@Test
+	def testTablaNotasConOtraNota = {
+		initializeCurso
+		curso addCursada new Cursada(7)
+		assertEquals(curso.tablaNotas, Map(1 -> 0, 2 -> 2, 3 -> 0, 4 -> 0, 5 -> 0, 6 -> 0, 7 -> 1, 8 -> 1, 9 -> 0, 10 -> 1))
 	}
 
 	@Test
 	def testCursosAprobadosSobreIniciados = {
-		initializeEstudiante
+		initializeCurso
 		assertEquals(curso.cursosAprobadosSobreIniciados, 40f, 0.01f)
 	}
 }

@@ -109,6 +109,12 @@ class EstudianteTest {
 	}
 	
 	@Test
+	def testTablaNotas = {
+		initializeEstudiante
+		assertEquals(estudiante.tablaNotas, Map(1 -> 0, 2 -> 2, 3 -> 0, 4 -> 0, 5 -> 0, 6 -> 0, 7 -> 0, 8 -> 1, 9 -> 0, 10 -> 1))
+	}
+	
+	@Test
 	def testFiltrarCursosPorAnio2013 = {
 		initializeEstudiante
 		assertEquals(estudiante.filtrarCursosPorAnio(2013), List(obj3, des, tvd, tti, labo))
