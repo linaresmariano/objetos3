@@ -9,6 +9,7 @@ public aspect ValidadorAspect {
 	pointcut setter():
 		execution(void main.dominio..set*(*));
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	void around(): setter()  {
 		Object objeto = thisJoinPoint.getTarget();
 		String metodo = thisJoinPoint.getSignature().getName();
