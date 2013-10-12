@@ -5,9 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import main.dominio.Persona;
-import main.ejercicio1.ContadorLlamadasAspect;
+import main.ejercicio3.ContadorLlamadasBonusAspect;
 
-public class ContadorLlamadasTest {
+public class ContadorLlamadasBonusTest {
 	@Test
 	public void sampleTest () {
 		Persona p1 = new Persona();
@@ -16,13 +16,14 @@ public class ContadorLlamadasTest {
 		p1.setNombre("Carlos");
 		
 		Persona p2 = new Persona();
+		p2.getNombre();
 		
 		int llamadas_p1_getNombre =
-				ContadorLlamadasAspect.aspectOf().cantLlamadas(p1, "getNombre");
+				ContadorLlamadasBonusAspect.aspectOf(p1).cantLlamadas("getNombre");
 		int llamadas_p1_setNombre =
-				ContadorLlamadasAspect.aspectOf().cantLlamadas(p1, "setNombre");
+				ContadorLlamadasBonusAspect.aspectOf(p1).cantLlamadas("setNombre");
 		int llamadas_p2_setNombre =
-				ContadorLlamadasAspect.aspectOf().cantLlamadas(p2, "setNombre");
+				ContadorLlamadasBonusAspect.aspectOf(p2).cantLlamadas("setNombre");
 		
 		assertEquals(llamadas_p1_getNombre, 1);
 		assertEquals(llamadas_p1_setNombre, 2);

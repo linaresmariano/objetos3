@@ -1,4 +1,4 @@
-package main.ejerciciobonus2;
+package main.ejercicio4;
 
 @Validable
 public class PersonaValidable {

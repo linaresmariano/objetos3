@@ -64,11 +64,11 @@ class ProfesorTest {
 	
 	@Test
 	def testFiltrarCursosPorAnio2013 = {
-		assertEquals(profesor.filtrarCursosPorAnio(2013), List(obj3, des))
+		assertEquals(profesor.filtrarCursosPorAnio(2013).cursos, List(obj3, des))
 	}
 	
 	@Test
 	def testFiltrarCursosPorAnio2014 = {
-		assertEquals(profesor.filtrarCursosPorAnio(2014), List())
+		assertEquals(profesor.filtrarCursosPorAnio(2014).cursos, List())
 	}
 }

@@ -2,7 +2,7 @@ package test.dominio;
 
 import static org.junit.Assert.assertEquals;
 import main.ejercicio2.ValidarStringNoVacio;
-import main.ejerciciobonus2.PersonaValidable;
+import main.ejercicio4.PersonaValidable;
 
 import org.junit.Test;
 

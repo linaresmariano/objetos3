@@ -1,4 +1,4 @@
-package main.ejerciciobonus2;
+package main.ejercicio4;
 
 import main.ejercicio2.Validador;
 

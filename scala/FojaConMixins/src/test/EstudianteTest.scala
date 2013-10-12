@@ -117,12 +117,24 @@ class EstudianteTest {
 	@Test
 	def testFiltrarCursosPorAnio2013 = {
 		initializeEstudiante
-		assertEquals(estudiante.filtrarCursosPorAnio(2013), List(obj3, des, tvd, tti, labo))
+		assertEquals(estudiante.filtrarCursosPorAnio(2013).cursos, List(obj3, des, tvd, tti, labo))
+	}
+	
+	@Test
+	def testPromedioSinAplazosDelCortePorAnio = {
+		initializeEstudiante
+		assertEquals(estudiante.filtrarCursosPorAnio(2013).promedioSinAplazos, 9.0, 0.01f)
+	}
+	
+	@Test
+	def testPromedioConAplazosDelCortePorAnio = {
+		initializeEstudiante
+		assertEquals(estudiante.filtrarCursosPorAnio(2013).promedioConAplazos, 5.0, 0.01f)
 	}
 	
 	@Test
 	def testFiltrarCursosPorAnio2014 = {
 		initializeEstudiante
-		assertEquals(estudiante.filtrarCursosPorAnio(2014), List())
+		assertEquals(estudiante.filtrarCursosPorAnio(2014).cursos, List())
 	}
 }
