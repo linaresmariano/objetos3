@@ -1,37 +1,30 @@
 package main.ejercicio1;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class ContadorLlamadas {
-	Map<Object, Map<String, Integer>> contador = new HashMap<Object, Map<String, Integer>>();
-
+public class ContadorLlamadas extends DobleMapLoco<Integer> {
+	
 	public void contar(Object objeto, String metodo) {
-		Map<String, Integer> map = this.contador.get(objeto);
+		super.put(objeto, metodo, 1);
+	}
+	
+	public Integer contadas(Object objeto, String metodo) {
+		Integer retVal = super.value(objeto, metodo);
 		
-		if(map == null) {
-			Map<String, Integer> datos = new HashMap<String, Integer>();
-			datos.put(metodo, 1);
-			
-			this.contador.put(objeto, datos);
-		} else {
-
-			if(map.get(metodo) == null) {
-				map.put(metodo, 1);
-			} else {
-				int cantidadAnterior = map.get(metodo);
-				map.put(metodo, cantidadAnterior + 1);
-			}
+		if(retVal == null) {
+			return 0;
 		}
+		
+		return retVal;
 	}
 
-	public int contadas(Object objeto, String metodo) {
-		Map<String, Integer> map = this.contador.get(objeto);
-		
-		if(map != null && map.get(metodo) != null) {
-			return map.get(metodo);
+	@Override
+	protected void replaceOldValue(Map<String, Integer> map, String metodo, Integer value) {
+		if(map.get(metodo) == null) {
+			map.put(metodo, 1);
+		} else {
+			int cantidadAnterior = map.get(metodo);
+			map.put(metodo, cantidadAnterior + 1);
 		}
-		
-		return 0;
 	}
 }

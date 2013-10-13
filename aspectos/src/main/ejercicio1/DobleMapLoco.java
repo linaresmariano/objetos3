@@ -15,11 +15,11 @@ public class DobleMapLoco<T> {
 			
 			this.contador.put(objeto, datos);
 		} else {
-			replaceOldValue(map, metodo, valor);
+			this.replaceOldValue(map, metodo, valor);
 		}
 	}
 
-	private void replaceOldValue(Map<String, T> map, String metodo, T valor) {
+	protected void replaceOldValue(Map<String, T> map, String metodo, T valor) {
 		map.put(metodo, valor);
 	}
 
