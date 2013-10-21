@@ -1,20 +1,16 @@
 package main.ejercicio2;
 
-import main.Utils;
-
 public aspect ValidadorAspect {
 	
 	private Validadores validadores = new Validadores();
 	
 	pointcut setter():
-		execution(void main.dominio..set*(*));
+		set(* main.dominio..*);
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	void around(): setter()  {
 		Object objeto = thisJoinPoint.getTarget();
-		String metodo = thisJoinPoint.getSignature().getName();
-		
-		String field = Utils.getFieldFromAccessor(metodo);
+		String field = thisJoinPoint.getSignature().getName();
 		
 		Validador validador = validadores.value(objeto, field);
 		
