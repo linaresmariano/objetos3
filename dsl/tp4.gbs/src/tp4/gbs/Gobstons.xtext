@@ -1,0 +1,40 @@
+grammar tp4.gbs.Gobstons with org.eclipse.xtext.xbase.Xbase
+
+generate gobstons "http://www.gbs.tp4/Gobstons"
+
+Domainmodel:
+  importSection=XImportSection?
+  elements+=AbstractElement*;
+ 
+AbstractElement:
+  PackageDeclaration | Entity;
+ 
+PackageDeclaration:
+  'package' name=QualifiedName '{'
+    elements+=AbstractElement*
+  '}';
+ 
+Entity:
+  'entity' name=ValidID 
+    ('extends' superType=JvmTypeReference)? '{'
+    features+=Feature*
+  '}';
+ 
+Feature:
+  Property | Operation;
+ 
+Property:
+  name=ValidID ':' type=JvmTypeReference;
+ 
+Operation:
+  'op' name=ValidID 
+    '('(params+=FullJvmFormalParameter 
+      (',' params+=FullJvmFormalParameter)*)?')'
+    ':' type=JvmTypeReference 
+    body=XBlockExpression;
+
+//Model:
+//	greetings+=Greeting*;
+//	
+//Greeting:
+//	'Hello' name=ID '!';
