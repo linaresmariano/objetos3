@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="tp4.gbs.sdk"
+	label="Gobstons SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="tp4.gbs"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="tp4.gbs.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>

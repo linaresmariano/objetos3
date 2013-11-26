@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/tp4.gbs/src-gen" editDirectory="/tp4.gbs.edit/src"
+    editorDirectory="/tp4.gbs.editor/src" modelPluginID="tp4.gbs" forceOverwrite="true"
+    modelName="Gobstons" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="tp4.gbs.edit" editorPluginID="tp4.gbs.editor"
+    runtimeVersion="2.9" usedGenPackages="../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types ../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase ../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+  <genPackages prefix="Gobstons" basePackage="tp4.gbs" disposableProviderFactory="true"
+      fileExtensions="gbs" ecorePackage="Gobstons.ecore#/">
+    <genClasses ecoreClass="Gobstons.ecore#//Domainmodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Domainmodel/importSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Domainmodel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gobstons.ecore#//AbstractElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//PackageDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//PackageDeclaration/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Entity/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Entity/features"/>
+    </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gobstons.ecore#//Feature/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Feature/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//Property"/>
+    <genClasses ecoreClass="Gobstons.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Operation/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Operation/body"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
