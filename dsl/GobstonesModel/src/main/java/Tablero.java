@@ -1,4 +1,4 @@
-package tp4.gbs.jvmmodel;
+package main.java;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -28,7 +28,12 @@ public class Tablero {
 	}
 	
 	public void mover(String dir) {
-		System.out.println("MOVER");
+		try {
+			Method moveDir = Coord.class.getDeclaredMethod("mover"+dir);
+			moveDir.invoke(cabezal);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void poner(String color) {
@@ -42,5 +47,18 @@ public class Tablero {
 
 	private Casillero getCasilleroActual() {
 		return this.tablero.get(this.cabezal.getY()).get(this.cabezal.getX());
+	}
+	
+	public void print() {
+		System.out.println("-----------------------------------------------------------------------------");
+		System.out.println("|  1     |   2     |     3    |   4     |     5    |    6   |   7    |   8   |");
+		System.out.println("-----------------------------------------------------------------------------");
+		
+		for(List<Casillero> row : this.tablero) {
+			for(Casillero casillero : row) {
+				System.out.print(casillero.toPrint());
+			}
+			System.out.println("\n-----------------------------------------------------------------------------");
+		}
 	}
 }

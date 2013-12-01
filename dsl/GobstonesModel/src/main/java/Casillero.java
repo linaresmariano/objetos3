@@ -1,4 +1,4 @@
-package tp4.gbs.jvmmodel;
+package main.java;
 
 public class Casillero {
 	private int rojo = 0;
@@ -20,5 +20,9 @@ public class Casillero {
 	
 	public int addAzul() {
 		return this.azul++;
+	}
+
+	public String toPrint() {
+		return "|R:"+rojo+"-V:"+verde+"-N:"+negro+"-A:"+azul+"|";
 	}
 }

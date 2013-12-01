@@ -22,7 +22,7 @@ class GobstonsGenerator implements IGenerator {
 
 	def compile(ProcedureDeclaration f) {
 		'''
-			import tp4.gbs.jvmmodel.Tablero;
+			import main.java.Tablero;
 
 			public class Main {
 

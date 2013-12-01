@@ -46,7 +46,7 @@ public class GobstonsGenerator implements IGenerator {
   
   public CharSequence compile(final ProcedureDeclaration f) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("import tp4.gbs.jvmmodel.Tablero;");
+    _builder.append("import main.java.Tablero;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class Main {");
