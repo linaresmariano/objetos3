@@ -75,39 +75,24 @@ public class GobstonsAdapterFactory extends AdapterFactoryImpl
     new GobstonsSwitch<Adapter>()
     {
       @Override
-      public Adapter caseDomainmodel(Domainmodel object)
+      public Adapter caseProcedureDeclaration(ProcedureDeclaration object)
       {
-        return createDomainmodelAdapter();
-      }
-      @Override
-      public Adapter caseAbstractElement(AbstractElement object)
-      {
-        return createAbstractElementAdapter();
-      }
-      @Override
-      public Adapter casePackageDeclaration(PackageDeclaration object)
-      {
-        return createPackageDeclarationAdapter();
-      }
-      @Override
-      public Adapter caseEntity(Entity object)
-      {
-        return createEntityAdapter();
-      }
-      @Override
-      public Adapter caseFeature(Feature object)
-      {
-        return createFeatureAdapter();
-      }
-      @Override
-      public Adapter caseProperty(Property object)
-      {
-        return createPropertyAdapter();
+        return createProcedureDeclarationAdapter();
       }
       @Override
       public Adapter caseOperation(Operation object)
       {
         return createOperationAdapter();
+      }
+      @Override
+      public Adapter caseMover(Mover object)
+      {
+        return createMoverAdapter();
+      }
+      @Override
+      public Adapter casePoner(Poner object)
+      {
+        return createPonerAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -132,91 +117,16 @@ public class GobstonsAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Domainmodel <em>Domainmodel</em>}'.
+   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.ProcedureDeclaration <em>Procedure Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see tp4.gbs.gobstons.Domainmodel
+   * @see tp4.gbs.gobstons.ProcedureDeclaration
    * @generated
    */
-  public Adapter createDomainmodelAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.AbstractElement <em>Abstract Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see tp4.gbs.gobstons.AbstractElement
-   * @generated
-   */
-  public Adapter createAbstractElementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.PackageDeclaration <em>Package Declaration</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see tp4.gbs.gobstons.PackageDeclaration
-   * @generated
-   */
-  public Adapter createPackageDeclarationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Entity <em>Entity</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see tp4.gbs.gobstons.Entity
-   * @generated
-   */
-  public Adapter createEntityAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Feature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see tp4.gbs.gobstons.Feature
-   * @generated
-   */
-  public Adapter createFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Property <em>Property</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see tp4.gbs.gobstons.Property
-   * @generated
-   */
-  public Adapter createPropertyAdapter()
+  public Adapter createProcedureDeclarationAdapter()
   {
     return null;
   }
@@ -232,6 +142,36 @@ public class GobstonsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Mover <em>Mover</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see tp4.gbs.gobstons.Mover
+   * @generated
+   */
+  public Adapter createMoverAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Poner <em>Poner</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see tp4.gbs.gobstons.Poner
+   * @generated
+   */
+  public Adapter createPonerAdapter()
   {
     return null;
   }

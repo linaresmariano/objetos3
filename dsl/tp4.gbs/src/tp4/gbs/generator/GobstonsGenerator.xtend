@@ -6,6 +6,8 @@ package tp4.gbs.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import tp4.gbs.gobstons.Operation
+import tp4.gbs.gobstons.ProcedureDeclaration
 
 /**
  * Generates code from your model files on save.
@@ -13,12 +15,33 @@ import org.eclipse.xtext.generator.IFileSystemAccess
  * see http://www.eclipse.org/Xtext/documentation.html#TutorialCodeGeneration
  */
 class GobstonsGenerator implements IGenerator {
-	
+
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		for (ProcedureDeclaration e : resource.allContents.toIterable.filter(ProcedureDeclaration)) {
+			fsa.generateFile("Main.java", e.compile)
+		}
 	}
+
+	def compile(Operation op) {
+		'''
+		tablero.poner("«op.param»");
+		'''
+	}
+
+	def compile(ProcedureDeclaration f) {
+		'''
+				import tp4.gbs.jvmmodel.Tablero;
+			
+				public class Main {
+					
+				 	public static void main(String[] args) {
+				 		Tablero tablero = new Tablero();
+				 		«FOR Operation operation : f.operations»
+				 			«operation.compile»
+				 		«ENDFOR»
+				 	}
+				 }
+		'''
+	}
+
 }

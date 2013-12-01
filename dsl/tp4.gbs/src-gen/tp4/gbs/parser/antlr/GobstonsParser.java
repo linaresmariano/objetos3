@@ -25,7 +25,7 @@ public class GobstonsParser extends org.eclipse.xtext.parser.antlr.AbstractAntlr
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Domainmodel";
+		return "ProcedureDeclaration";
 	}
 	
 	public GobstonsGrammarAccess getGrammarAccess() {

@@ -2,24 +2,12 @@
  */
 package tp4.gbs.gobstons.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.xtext.common.types.JvmFormalParameter;
-
-import org.eclipse.xtext.xbase.XExpression;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tp4.gbs.gobstons.GobstonsPackage;
 import tp4.gbs.gobstons.Operation;
@@ -31,34 +19,33 @@ import tp4.gbs.gobstons.Operation;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link tp4.gbs.gobstons.impl.OperationImpl#getParams <em>Params</em>}</li>
- *   <li>{@link tp4.gbs.gobstons.impl.OperationImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link tp4.gbs.gobstons.impl.OperationImpl#getParam <em>Param</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class OperationImpl extends FeatureImpl implements Operation
+public class OperationImpl extends MinimalEObjectImpl.Container implements Operation
 {
   /**
-   * The cached value of the '{@link #getParams() <em>Params</em>}' containment reference list.
+   * The default value of the '{@link #getParam() <em>Param</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParams()
+   * @see #getParam()
    * @generated
    * @ordered
    */
-  protected EList<JvmFormalParameter> params;
+  protected static final String PARAM_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+   * The cached value of the '{@link #getParam() <em>Param</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBody()
+   * @see #getParam()
    * @generated
    * @ordered
    */
-  protected XExpression body;
+  protected String param = PARAM_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,13 +73,9 @@ public class OperationImpl extends FeatureImpl implements Operation
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<JvmFormalParameter> getParams()
+  public String getParam()
   {
-    if (params == null)
-    {
-      params = new EObjectContainmentEList<JvmFormalParameter>(JvmFormalParameter.class, this, GobstonsPackage.OPERATION__PARAMS);
-    }
-    return params;
+    return param;
   }
 
   /**
@@ -100,65 +83,12 @@ public class OperationImpl extends FeatureImpl implements Operation
    * <!-- end-user-doc -->
    * @generated
    */
-  public XExpression getBody()
+  public void setParam(String newParam)
   {
-    return body;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetBody(XExpression newBody, NotificationChain msgs)
-  {
-    XExpression oldBody = body;
-    body = newBody;
+    String oldParam = param;
+    param = newParam;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GobstonsPackage.OPERATION__BODY, oldBody, newBody);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setBody(XExpression newBody)
-  {
-    if (newBody != body)
-    {
-      NotificationChain msgs = null;
-      if (body != null)
-        msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GobstonsPackage.OPERATION__BODY, null, msgs);
-      if (newBody != null)
-        msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GobstonsPackage.OPERATION__BODY, null, msgs);
-      msgs = basicSetBody(newBody, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GobstonsPackage.OPERATION__BODY, newBody, newBody));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GobstonsPackage.OPERATION__PARAMS:
-        return ((InternalEList<?>)getParams()).basicRemove(otherEnd, msgs);
-      case GobstonsPackage.OPERATION__BODY:
-        return basicSetBody(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, GobstonsPackage.OPERATION__PARAM, oldParam, param));
   }
 
   /**
@@ -171,10 +101,8 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case GobstonsPackage.OPERATION__PARAMS:
-        return getParams();
-      case GobstonsPackage.OPERATION__BODY:
-        return getBody();
+      case GobstonsPackage.OPERATION__PARAM:
+        return getParam();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -184,18 +112,13 @@ public class OperationImpl extends FeatureImpl implements Operation
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GobstonsPackage.OPERATION__PARAMS:
-        getParams().clear();
-        getParams().addAll((Collection<? extends JvmFormalParameter>)newValue);
-        return;
-      case GobstonsPackage.OPERATION__BODY:
-        setBody((XExpression)newValue);
+      case GobstonsPackage.OPERATION__PARAM:
+        setParam((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -211,11 +134,8 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case GobstonsPackage.OPERATION__PARAMS:
-        getParams().clear();
-        return;
-      case GobstonsPackage.OPERATION__BODY:
-        setBody((XExpression)null);
+      case GobstonsPackage.OPERATION__PARAM:
+        setParam(PARAM_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -231,12 +151,27 @@ public class OperationImpl extends FeatureImpl implements Operation
   {
     switch (featureID)
     {
-      case GobstonsPackage.OPERATION__PARAMS:
-        return params != null && !params.isEmpty();
-      case GobstonsPackage.OPERATION__BODY:
-        return body != null;
+      case GobstonsPackage.OPERATION__PARAM:
+        return PARAM_EDEFAULT == null ? param != null : !PARAM_EDEFAULT.equals(param);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (param: ");
+    result.append(param);
+    result.append(')');
+    return result.toString();
   }
 
 } //OperationImpl

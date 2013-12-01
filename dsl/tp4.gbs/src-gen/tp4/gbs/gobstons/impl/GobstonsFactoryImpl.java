@@ -64,13 +64,10 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
   {
     switch (eClass.getClassifierID())
     {
-      case GobstonsPackage.DOMAINMODEL: return createDomainmodel();
-      case GobstonsPackage.ABSTRACT_ELEMENT: return createAbstractElement();
-      case GobstonsPackage.PACKAGE_DECLARATION: return createPackageDeclaration();
-      case GobstonsPackage.ENTITY: return createEntity();
-      case GobstonsPackage.FEATURE: return createFeature();
-      case GobstonsPackage.PROPERTY: return createProperty();
+      case GobstonsPackage.PROCEDURE_DECLARATION: return createProcedureDeclaration();
       case GobstonsPackage.OPERATION: return createOperation();
+      case GobstonsPackage.MOVER: return createMover();
+      case GobstonsPackage.PONER: return createPoner();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -81,65 +78,10 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Domainmodel createDomainmodel()
+  public ProcedureDeclaration createProcedureDeclaration()
   {
-    DomainmodelImpl domainmodel = new DomainmodelImpl();
-    return domainmodel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AbstractElement createAbstractElement()
-  {
-    AbstractElementImpl abstractElement = new AbstractElementImpl();
-    return abstractElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PackageDeclaration createPackageDeclaration()
-  {
-    PackageDeclarationImpl packageDeclaration = new PackageDeclarationImpl();
-    return packageDeclaration;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity createEntity()
-  {
-    EntityImpl entity = new EntityImpl();
-    return entity;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Feature createFeature()
-  {
-    FeatureImpl feature = new FeatureImpl();
-    return feature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Property createProperty()
-  {
-    PropertyImpl property = new PropertyImpl();
-    return property;
+    ProcedureDeclarationImpl procedureDeclaration = new ProcedureDeclarationImpl();
+    return procedureDeclaration;
   }
 
   /**
@@ -151,6 +93,28 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
   {
     OperationImpl operation = new OperationImpl();
     return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Mover createMover()
+  {
+    MoverImpl mover = new MoverImpl();
+    return mover;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Poner createPoner()
+  {
+    PonerImpl poner = new PonerImpl();
+    return poner;
   }
 
   /**

@@ -1,4 +1,5 @@
-grammar tp4.gbs.Gobstons with org.eclipse.xtext.xbase.Xbase
+// grammar tp4.gbs.Gobstons with org.eclipse.xtext.xbase.Xbase
+grammar tp4.gbs.Gobstons with org.eclipse.xtext.common.Terminals
 
 generate gobstons "http://www.gbs.tp4/Gobstons"
 

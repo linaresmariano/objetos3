@@ -2,11 +2,7 @@
  */
 package tp4.gbs.gobstons;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.xtext.common.types.JvmFormalParameter;
-
-import org.eclipse.xtext.xbase.XExpression;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,8 +12,7 @@ import org.eclipse.xtext.xbase.XExpression;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link tp4.gbs.gobstons.Operation#getParams <em>Params</em>}</li>
- *   <li>{@link tp4.gbs.gobstons.Operation#getBody <em>Body</em>}</li>
+ *   <li>{@link tp4.gbs.gobstons.Operation#getParam <em>Param</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,48 +20,32 @@ import org.eclipse.xtext.xbase.XExpression;
  * @model
  * @generated
  */
-public interface Operation extends Feature
+public interface Operation extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Params</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.xtext.common.types.JvmFormalParameter}.
+   * Returns the value of the '<em><b>Param</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Params</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Param</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Params</em>' containment reference list.
-   * @see tp4.gbs.gobstons.GobstonsPackage#getOperation_Params()
-   * @model containment="true"
+   * @return the value of the '<em>Param</em>' attribute.
+   * @see #setParam(String)
+   * @see tp4.gbs.gobstons.GobstonsPackage#getOperation_Param()
+   * @model
    * @generated
    */
-  EList<JvmFormalParameter> getParams();
+  String getParam();
 
   /**
-   * Returns the value of the '<em><b>Body</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Body</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Body</em>' containment reference.
-   * @see #setBody(XExpression)
-   * @see tp4.gbs.gobstons.GobstonsPackage#getOperation_Body()
-   * @model containment="true"
-   * @generated
-   */
-  XExpression getBody();
-
-  /**
-   * Sets the value of the '{@link tp4.gbs.gobstons.Operation#getBody <em>Body</em>}' containment reference.
+   * Sets the value of the '{@link tp4.gbs.gobstons.Operation#getParam <em>Param</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Body</em>' containment reference.
-   * @see #getBody()
+   * @param value the new value of the '<em>Param</em>' attribute.
+   * @see #getParam()
    * @generated
    */
-  void setBody(XExpression value);
+  void setParam(String value);
 
 } // Operation

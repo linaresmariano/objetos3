@@ -23,58 +23,13 @@ public interface GobstonsFactory extends EFactory
   GobstonsFactory eINSTANCE = tp4.gbs.gobstons.impl.GobstonsFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Domainmodel</em>'.
+   * Returns a new object of class '<em>Procedure Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Domainmodel</em>'.
+   * @return a new object of class '<em>Procedure Declaration</em>'.
    * @generated
    */
-  Domainmodel createDomainmodel();
-
-  /**
-   * Returns a new object of class '<em>Abstract Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Abstract Element</em>'.
-   * @generated
-   */
-  AbstractElement createAbstractElement();
-
-  /**
-   * Returns a new object of class '<em>Package Declaration</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Package Declaration</em>'.
-   * @generated
-   */
-  PackageDeclaration createPackageDeclaration();
-
-  /**
-   * Returns a new object of class '<em>Entity</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity</em>'.
-   * @generated
-   */
-  Entity createEntity();
-
-  /**
-   * Returns a new object of class '<em>Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Feature</em>'.
-   * @generated
-   */
-  Feature createFeature();
-
-  /**
-   * Returns a new object of class '<em>Property</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Property</em>'.
-   * @generated
-   */
-  Property createProperty();
+  ProcedureDeclaration createProcedureDeclaration();
 
   /**
    * Returns a new object of class '<em>Operation</em>'.
@@ -84,6 +39,24 @@ public interface GobstonsFactory extends EFactory
    * @generated
    */
   Operation createOperation();
+
+  /**
+   * Returns a new object of class '<em>Mover</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mover</em>'.
+   * @generated
+   */
+  Mover createMover();
+
+  /**
+   * Returns a new object of class '<em>Poner</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Poner</em>'.
+   * @generated
+   */
+  Poner createPoner();
 
   /**
    * Returns the package supported by this factory.

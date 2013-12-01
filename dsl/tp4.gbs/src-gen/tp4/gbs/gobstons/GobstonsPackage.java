@@ -57,226 +57,32 @@ public interface GobstonsPackage extends EPackage
   GobstonsPackage eINSTANCE = tp4.gbs.gobstons.impl.GobstonsPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link tp4.gbs.gobstons.impl.DomainmodelImpl <em>Domainmodel</em>}' class.
+   * The meta object id for the '{@link tp4.gbs.gobstons.impl.ProcedureDeclarationImpl <em>Procedure Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see tp4.gbs.gobstons.impl.DomainmodelImpl
-   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getDomainmodel()
+   * @see tp4.gbs.gobstons.impl.ProcedureDeclarationImpl
+   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getProcedureDeclaration()
    * @generated
    */
-  int DOMAINMODEL = 0;
+  int PROCEDURE_DECLARATION = 0;
 
   /**
-   * The feature id for the '<em><b>Import Section</b></em>' containment reference.
+   * The feature id for the '<em><b>Operations</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOMAINMODEL__IMPORT_SECTION = 0;
+  int PROCEDURE_DECLARATION__OPERATIONS = 0;
 
   /**
-   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+   * The number of structural features of the '<em>Procedure Declaration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOMAINMODEL__ELEMENTS = 1;
-
-  /**
-   * The number of structural features of the '<em>Domainmodel</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOMAINMODEL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link tp4.gbs.gobstons.impl.AbstractElementImpl <em>Abstract Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see tp4.gbs.gobstons.impl.AbstractElementImpl
-   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getAbstractElement()
-   * @generated
-   */
-  int ABSTRACT_ELEMENT = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSTRACT_ELEMENT__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Abstract Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSTRACT_ELEMENT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link tp4.gbs.gobstons.impl.PackageDeclarationImpl <em>Package Declaration</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see tp4.gbs.gobstons.impl.PackageDeclarationImpl
-   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getPackageDeclaration()
-   * @generated
-   */
-  int PACKAGE_DECLARATION = 2;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE_DECLARATION__NAME = ABSTRACT_ELEMENT__NAME;
-
-  /**
-   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE_DECLARATION__ELEMENTS = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Package Declaration</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE_DECLARATION_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link tp4.gbs.gobstons.impl.EntityImpl <em>Entity</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see tp4.gbs.gobstons.impl.EntityImpl
-   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getEntity()
-   * @generated
-   */
-  int ENTITY = 3;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__NAME = ABSTRACT_ELEMENT__NAME;
-
-  /**
-   * The feature id for the '<em><b>Super Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__SUPER_TYPE = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__FEATURES = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Entity</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link tp4.gbs.gobstons.impl.FeatureImpl <em>Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see tp4.gbs.gobstons.impl.FeatureImpl
-   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getFeature()
-   * @generated
-   */
-  int FEATURE = 4;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE__TYPE = 1;
-
-  /**
-   * The number of structural features of the '<em>Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link tp4.gbs.gobstons.impl.PropertyImpl <em>Property</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see tp4.gbs.gobstons.impl.PropertyImpl
-   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getProperty()
-   * @generated
-   */
-  int PROPERTY = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROPERTY__NAME = FEATURE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROPERTY__TYPE = FEATURE__TYPE;
-
-  /**
-   * The number of structural features of the '<em>Property</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROPERTY_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
+  int PROCEDURE_DECLARATION_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link tp4.gbs.gobstons.impl.OperationImpl <em>Operation</em>}' class.
@@ -286,43 +92,16 @@ public interface GobstonsPackage extends EPackage
    * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 6;
+  int OPERATION = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Param</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION__NAME = FEATURE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION__TYPE = FEATURE__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Params</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION__PARAMS = FEATURE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Body</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION__BODY = FEATURE_FEATURE_COUNT + 1;
+  int OPERATION__PARAM = 0;
 
   /**
    * The number of structural features of the '<em>Operation</em>' class.
@@ -331,156 +110,85 @@ public interface GobstonsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+  int OPERATION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link tp4.gbs.gobstons.impl.MoverImpl <em>Mover</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see tp4.gbs.gobstons.impl.MoverImpl
+   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getMover()
+   * @generated
+   */
+  int MOVER = 2;
+
+  /**
+   * The feature id for the '<em><b>Param</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOVER__PARAM = OPERATION__PARAM;
+
+  /**
+   * The number of structural features of the '<em>Mover</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOVER_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link tp4.gbs.gobstons.impl.PonerImpl <em>Poner</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see tp4.gbs.gobstons.impl.PonerImpl
+   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getPoner()
+   * @generated
+   */
+  int PONER = 3;
+
+  /**
+   * The feature id for the '<em><b>Param</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PONER__PARAM = OPERATION__PARAM;
+
+  /**
+   * The number of structural features of the '<em>Poner</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PONER_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 0;
 
 
   /**
-   * Returns the meta object for class '{@link tp4.gbs.gobstons.Domainmodel <em>Domainmodel</em>}'.
+   * Returns the meta object for class '{@link tp4.gbs.gobstons.ProcedureDeclaration <em>Procedure Declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Domainmodel</em>'.
-   * @see tp4.gbs.gobstons.Domainmodel
+   * @return the meta object for class '<em>Procedure Declaration</em>'.
+   * @see tp4.gbs.gobstons.ProcedureDeclaration
    * @generated
    */
-  EClass getDomainmodel();
+  EClass getProcedureDeclaration();
 
   /**
-   * Returns the meta object for the containment reference '{@link tp4.gbs.gobstons.Domainmodel#getImportSection <em>Import Section</em>}'.
+   * Returns the meta object for the containment reference list '{@link tp4.gbs.gobstons.ProcedureDeclaration#getOperations <em>Operations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Import Section</em>'.
-   * @see tp4.gbs.gobstons.Domainmodel#getImportSection()
-   * @see #getDomainmodel()
+   * @return the meta object for the containment reference list '<em>Operations</em>'.
+   * @see tp4.gbs.gobstons.ProcedureDeclaration#getOperations()
+   * @see #getProcedureDeclaration()
    * @generated
    */
-  EReference getDomainmodel_ImportSection();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link tp4.gbs.gobstons.Domainmodel#getElements <em>Elements</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Elements</em>'.
-   * @see tp4.gbs.gobstons.Domainmodel#getElements()
-   * @see #getDomainmodel()
-   * @generated
-   */
-  EReference getDomainmodel_Elements();
-
-  /**
-   * Returns the meta object for class '{@link tp4.gbs.gobstons.AbstractElement <em>Abstract Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Abstract Element</em>'.
-   * @see tp4.gbs.gobstons.AbstractElement
-   * @generated
-   */
-  EClass getAbstractElement();
-
-  /**
-   * Returns the meta object for the attribute '{@link tp4.gbs.gobstons.AbstractElement#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see tp4.gbs.gobstons.AbstractElement#getName()
-   * @see #getAbstractElement()
-   * @generated
-   */
-  EAttribute getAbstractElement_Name();
-
-  /**
-   * Returns the meta object for class '{@link tp4.gbs.gobstons.PackageDeclaration <em>Package Declaration</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Package Declaration</em>'.
-   * @see tp4.gbs.gobstons.PackageDeclaration
-   * @generated
-   */
-  EClass getPackageDeclaration();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link tp4.gbs.gobstons.PackageDeclaration#getElements <em>Elements</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Elements</em>'.
-   * @see tp4.gbs.gobstons.PackageDeclaration#getElements()
-   * @see #getPackageDeclaration()
-   * @generated
-   */
-  EReference getPackageDeclaration_Elements();
-
-  /**
-   * Returns the meta object for class '{@link tp4.gbs.gobstons.Entity <em>Entity</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Entity</em>'.
-   * @see tp4.gbs.gobstons.Entity
-   * @generated
-   */
-  EClass getEntity();
-
-  /**
-   * Returns the meta object for the containment reference '{@link tp4.gbs.gobstons.Entity#getSuperType <em>Super Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Super Type</em>'.
-   * @see tp4.gbs.gobstons.Entity#getSuperType()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_SuperType();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link tp4.gbs.gobstons.Entity#getFeatures <em>Features</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Features</em>'.
-   * @see tp4.gbs.gobstons.Entity#getFeatures()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_Features();
-
-  /**
-   * Returns the meta object for class '{@link tp4.gbs.gobstons.Feature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Feature</em>'.
-   * @see tp4.gbs.gobstons.Feature
-   * @generated
-   */
-  EClass getFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link tp4.gbs.gobstons.Feature#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see tp4.gbs.gobstons.Feature#getName()
-   * @see #getFeature()
-   * @generated
-   */
-  EAttribute getFeature_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link tp4.gbs.gobstons.Feature#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see tp4.gbs.gobstons.Feature#getType()
-   * @see #getFeature()
-   * @generated
-   */
-  EReference getFeature_Type();
-
-  /**
-   * Returns the meta object for class '{@link tp4.gbs.gobstons.Property <em>Property</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Property</em>'.
-   * @see tp4.gbs.gobstons.Property
-   * @generated
-   */
-  EClass getProperty();
+  EReference getProcedureDeclaration_Operations();
 
   /**
    * Returns the meta object for class '{@link tp4.gbs.gobstons.Operation <em>Operation</em>}'.
@@ -493,26 +201,35 @@ public interface GobstonsPackage extends EPackage
   EClass getOperation();
 
   /**
-   * Returns the meta object for the containment reference list '{@link tp4.gbs.gobstons.Operation#getParams <em>Params</em>}'.
+   * Returns the meta object for the attribute '{@link tp4.gbs.gobstons.Operation#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Params</em>'.
-   * @see tp4.gbs.gobstons.Operation#getParams()
+   * @return the meta object for the attribute '<em>Param</em>'.
+   * @see tp4.gbs.gobstons.Operation#getParam()
    * @see #getOperation()
    * @generated
    */
-  EReference getOperation_Params();
+  EAttribute getOperation_Param();
 
   /**
-   * Returns the meta object for the containment reference '{@link tp4.gbs.gobstons.Operation#getBody <em>Body</em>}'.
+   * Returns the meta object for class '{@link tp4.gbs.gobstons.Mover <em>Mover</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Body</em>'.
-   * @see tp4.gbs.gobstons.Operation#getBody()
-   * @see #getOperation()
+   * @return the meta object for class '<em>Mover</em>'.
+   * @see tp4.gbs.gobstons.Mover
    * @generated
    */
-  EReference getOperation_Body();
+  EClass getMover();
+
+  /**
+   * Returns the meta object for class '{@link tp4.gbs.gobstons.Poner <em>Poner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Poner</em>'.
+   * @see tp4.gbs.gobstons.Poner
+   * @generated
+   */
+  EClass getPoner();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -538,128 +255,22 @@ public interface GobstonsPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.DomainmodelImpl <em>Domainmodel</em>}' class.
+     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.ProcedureDeclarationImpl <em>Procedure Declaration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see tp4.gbs.gobstons.impl.DomainmodelImpl
-     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getDomainmodel()
+     * @see tp4.gbs.gobstons.impl.ProcedureDeclarationImpl
+     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getProcedureDeclaration()
      * @generated
      */
-    EClass DOMAINMODEL = eINSTANCE.getDomainmodel();
+    EClass PROCEDURE_DECLARATION = eINSTANCE.getProcedureDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Import Section</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DOMAINMODEL__IMPORT_SECTION = eINSTANCE.getDomainmodel_ImportSection();
-
-    /**
-     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DOMAINMODEL__ELEMENTS = eINSTANCE.getDomainmodel_Elements();
-
-    /**
-     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.AbstractElementImpl <em>Abstract Element</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see tp4.gbs.gobstons.impl.AbstractElementImpl
-     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getAbstractElement()
-     * @generated
-     */
-    EClass ABSTRACT_ELEMENT = eINSTANCE.getAbstractElement();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ABSTRACT_ELEMENT__NAME = eINSTANCE.getAbstractElement_Name();
-
-    /**
-     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.PackageDeclarationImpl <em>Package Declaration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see tp4.gbs.gobstons.impl.PackageDeclarationImpl
-     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getPackageDeclaration()
-     * @generated
-     */
-    EClass PACKAGE_DECLARATION = eINSTANCE.getPackageDeclaration();
-
-    /**
-     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PACKAGE_DECLARATION__ELEMENTS = eINSTANCE.getPackageDeclaration_Elements();
-
-    /**
-     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.EntityImpl <em>Entity</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see tp4.gbs.gobstons.impl.EntityImpl
-     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getEntity()
-     * @generated
-     */
-    EClass ENTITY = eINSTANCE.getEntity();
-
-    /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ENTITY__SUPER_TYPE = eINSTANCE.getEntity_SuperType();
-
-    /**
-     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ENTITY__FEATURES = eINSTANCE.getEntity_Features();
-
-    /**
-     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.FeatureImpl <em>Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see tp4.gbs.gobstons.impl.FeatureImpl
-     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getFeature()
-     * @generated
-     */
-    EClass FEATURE = eINSTANCE.getFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FEATURE__TYPE = eINSTANCE.getFeature_Type();
-
-    /**
-     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.PropertyImpl <em>Property</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see tp4.gbs.gobstons.impl.PropertyImpl
-     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getProperty()
-     * @generated
-     */
-    EClass PROPERTY = eINSTANCE.getProperty();
+    EReference PROCEDURE_DECLARATION__OPERATIONS = eINSTANCE.getProcedureDeclaration_Operations();
 
     /**
      * The meta object literal for the '{@link tp4.gbs.gobstons.impl.OperationImpl <em>Operation</em>}' class.
@@ -672,20 +283,32 @@ public interface GobstonsPackage extends EPackage
     EClass OPERATION = eINSTANCE.getOperation();
 
     /**
-     * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Param</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OPERATION__PARAMS = eINSTANCE.getOperation_Params();
+    EAttribute OPERATION__PARAM = eINSTANCE.getOperation_Param();
 
     /**
-     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.MoverImpl <em>Mover</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see tp4.gbs.gobstons.impl.MoverImpl
+     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getMover()
      * @generated
      */
-    EReference OPERATION__BODY = eINSTANCE.getOperation_Body();
+    EClass MOVER = eINSTANCE.getMover();
+
+    /**
+     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.PonerImpl <em>Poner</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see tp4.gbs.gobstons.impl.PonerImpl
+     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getPoner()
+     * @generated
+     */
+    EClass PONER = eINSTANCE.getPoner();
 
   }
 
