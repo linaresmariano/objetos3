@@ -28,7 +28,7 @@ public class Tablero {
 	}
 	
 	public void mover(String dir) {
-
+		System.out.println("MOVER");
 	}
 	
 	public void poner(String color) {
