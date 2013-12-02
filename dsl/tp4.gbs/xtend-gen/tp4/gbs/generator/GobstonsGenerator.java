@@ -58,6 +58,9 @@ public class GobstonsGenerator implements IGenerator {
     _builder.append("\t \t");
     _builder.append("Tablero tablero = new Tablero();");
     _builder.newLine();
+    _builder.append("\t \t");
+    _builder.append("tablero.print();");
+    _builder.newLine();
     {
       EList<Operation> _operations = f.getOperations();
       for(final Operation operation : _operations) {
@@ -67,6 +70,9 @@ public class GobstonsGenerator implements IGenerator {
         _builder.newLineIfNotEmpty();
       }
     }
+    _builder.append("\t \t");
+    _builder.append("tablero.print();");
+    _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();

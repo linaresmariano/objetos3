@@ -28,9 +28,11 @@ class GobstonsGenerator implements IGenerator {
 
 				 public static void main(String[] args) {
 				 	Tablero tablero = new Tablero();
+				 	tablero.print();
 				 	«FOR Operation operation : f.operations»
 				 		«operation.compile»
 				 	«ENDFOR»
+				 	tablero.print();
 				}
 			}
 		'''

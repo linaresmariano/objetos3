@@ -11,11 +11,11 @@ public class Coord {
 	}
 
 	public void moverSur() {
-		this.y--;
+		this.y++;
 	}
 	
 	public void moverNorte() {
-		this.y++;
+		this.y--;
 	}
 	
 	public void moverEste() {
