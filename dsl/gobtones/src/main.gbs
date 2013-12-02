@@ -1,0 +1,17 @@
+procedure Main() {
+	Mover(Sur)
+	Poner(Verde)
+	Poner(Rojo)
+	Mover(Sur)
+	Poner(Rojo)
+	Mover(Este)
+	Poner(Negro)
+	hayBolitas(Negro)
+	hayBolitas(Verde)
+
+	hayBolitas(Verde)	
+	
+	hayBolitas(Negro)
+	Poner(Verde)
+	Poner(Negro)
+}

@@ -39,6 +39,10 @@ public class Casillero {
 	}
 
 	public String toPrint() {
-		return "|R:"+rojo+"-V:"+verde+"-N:"+negro+"-A:"+azul+"|";
+		return "| R:"+rojo+" V:"+verde+" N:"+negro+" A:"+azul+" |";
+	}
+
+	public String toPrintCurrent() {
+		return this.toPrint().replace("|", "@").replace("-", "@");
 	}
 }

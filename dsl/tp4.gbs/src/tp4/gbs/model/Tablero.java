@@ -9,7 +9,7 @@ public class Tablero {
 	
 	Coord cabezal = new Coord(0,0);
 	
-	private final int SIZE = 8;
+	private final int SIZE = 4;
 	
 	List<List<Casillero>> tablero;
 	
@@ -65,15 +65,21 @@ public class Tablero {
 	}
 	
 	public void print() {
-		System.out.println("-----------------------------------------------------------------------------");
-		System.out.println("|  1     |   2     |     3    |   4     |     5    |    6   |   7    |   8   |");
-		System.out.println("-----------------------------------------------------------------------------");
+		String border = "---------------------------------------------------------------------------------";
+		System.out.println(border);
+		System.out.println("|   ||        1        ||        2        ||        3        ||        4        |");
+		System.out.println(border);
 		
 		for(List<Casillero> row : this.tablero) {
+			System.out.print("| " + (this.tablero.indexOf(row)+1) + " |");
 			for(Casillero casillero : row) {
-				System.out.print(casillero.toPrint());
+				if(casillero.equals(this.getCasilleroActual())) {
+					System.out.print(casillero.toPrintCurrent());
+				} else {
+					System.out.print(casillero.toPrint());
+				}
 			}
-			System.out.println("\n-----------------------------------------------------------------------------");
+			System.out.println("\n"+ border);
 		}
 	}
 }
