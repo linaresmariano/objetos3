@@ -39,8 +39,10 @@ public class Tablero {
 	
 	public void poner(String color) {
 		try {
-			Method getColor = Casillero.class.getDeclaredMethod("add"+color);
-			getColor.invoke(this.getCasilleroActual());
+			Field field = Casillero.class.getDeclaredField(color.toLowerCase());
+			field.setAccessible(true);
+			int cant = field.getInt(this.getCasilleroActual());
+			field.setInt(this.getCasilleroActual(), ++cant);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
