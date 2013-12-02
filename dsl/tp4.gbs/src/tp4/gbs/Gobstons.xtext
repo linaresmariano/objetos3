@@ -9,7 +9,10 @@ ProcedureDeclaration:
     '}';
     
 Operation:
-	Mover | Poner;
+	Mover | Poner | HayBolitas;
+
+HayBolitas:
+	'hayBolitas''('param=Color')';
 
 Mover:
 	'Mover''('param=Direccion')';

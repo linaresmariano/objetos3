@@ -8,6 +8,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Operation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="param" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HayBolitas" eSuperTypes="#//Operation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Mover" eSuperTypes="#//Operation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Poner" eSuperTypes="#//Operation"/>
 </ecore:EPackage>

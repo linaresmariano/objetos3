@@ -1,4 +1,4 @@
-package main.java;
+package tp4.gbs.model;
 
 public class Coord {
 	

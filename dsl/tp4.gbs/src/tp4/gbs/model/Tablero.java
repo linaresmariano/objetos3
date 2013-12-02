@@ -1,5 +1,6 @@
-package main.java;
+package tp4.gbs.model;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,20 @@ public class Tablero {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public boolean haybolitas(String color) {
+		int cant = 0;
+		
+		try {
+			Field field = Casillero.class.getDeclaredField(color.toLowerCase());
+			field.setAccessible(true);
+			cant = field.getInt(this.getCasilleroActual());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return cant > 0;
 	}
 
 	private Casillero getCasilleroActual() {

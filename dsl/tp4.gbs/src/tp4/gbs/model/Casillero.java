@@ -1,4 +1,4 @@
-package main.java;
+package tp4.gbs.model;
 
 public class Casillero {
 	private int rojo = 0;
@@ -20,6 +20,22 @@ public class Casillero {
 	
 	public int addAzul() {
 		return this.azul++;
+	}
+	
+	public boolean hayBolitasRojo() {
+		return this.rojo > 0;
+	}
+	
+	public boolean hayBolitasVerde() {
+		return this.verde > 0;
+	}
+	
+	public boolean hayBolitasNegro() {
+		return this.negro > 0;
+	}
+	
+	public boolean hayBolitasAzul() {
+		return this.azul > 0;
 	}
 
 	public String toPrint() {

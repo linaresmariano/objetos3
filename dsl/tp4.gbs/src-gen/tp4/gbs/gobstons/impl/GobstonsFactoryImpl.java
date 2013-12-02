@@ -66,6 +66,7 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
     {
       case GobstonsPackage.PROCEDURE_DECLARATION: return createProcedureDeclaration();
       case GobstonsPackage.OPERATION: return createOperation();
+      case GobstonsPackage.HAY_BOLITAS: return createHayBolitas();
       case GobstonsPackage.MOVER: return createMover();
       case GobstonsPackage.PONER: return createPoner();
       default:
@@ -93,6 +94,17 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
   {
     OperationImpl operation = new OperationImpl();
     return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HayBolitas createHayBolitas()
+  {
+    HayBolitasImpl hayBolitas = new HayBolitasImpl();
+    return hayBolitas;
   }
 
   /**

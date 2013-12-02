@@ -14,6 +14,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import tp4.gbs.gobstons.GobstonsPackage;
+import tp4.gbs.gobstons.HayBolitas;
 import tp4.gbs.gobstons.Mover;
 import tp4.gbs.gobstons.Poner;
 import tp4.gbs.gobstons.ProcedureDeclaration;
@@ -27,6 +28,13 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == GobstonsPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case GobstonsPackage.HAY_BOLITAS:
+				if(context == grammarAccess.getHayBolitasRule() ||
+				   context == grammarAccess.getOperationRule()) {
+					sequence_HayBolitas(context, (HayBolitas) semanticObject); 
+					return; 
+				}
+				else break;
 			case GobstonsPackage.MOVER:
 				if(context == grammarAccess.getMoverRule() ||
 				   context == grammarAccess.getOperationRule()) {
@@ -50,6 +58,22 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     param=Color
+	 */
+	protected void sequence_HayBolitas(EObject context, HayBolitas semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getHayBolitasAccess().getParamColorParserRuleCall_2_0(), semanticObject.getParam());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * Constraint:

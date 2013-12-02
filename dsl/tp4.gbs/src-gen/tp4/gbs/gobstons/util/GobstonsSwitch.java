@@ -86,6 +86,14 @@ public class GobstonsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GobstonsPackage.HAY_BOLITAS:
+      {
+        HayBolitas hayBolitas = (HayBolitas)theEObject;
+        T result = caseHayBolitas(hayBolitas);
+        if (result == null) result = caseOperation(hayBolitas);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GobstonsPackage.MOVER:
       {
         Mover mover = (Mover)theEObject;
@@ -134,6 +142,22 @@ public class GobstonsSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOperation(Operation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Hay Bolitas</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Hay Bolitas</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHayBolitas(HayBolitas object)
   {
     return null;
   }

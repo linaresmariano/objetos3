@@ -155,6 +155,67 @@ ruleOperation returns [EObject current=null]
         $current = $this_Poner_1.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getOperationAccess().getHayBolitasParserRuleCall_2()); 
+    }
+    this_HayBolitas_2=ruleHayBolitas
+    { 
+        $current = $this_HayBolitas_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleHayBolitas
+entryRuleHayBolitas returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getHayBolitasRule()); }
+	 iv_ruleHayBolitas=ruleHayBolitas 
+	 { $current=$iv_ruleHayBolitas.current; } 
+	 EOF 
+;
+
+// Rule HayBolitas
+ruleHayBolitas returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='hayBolitas' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getHayBolitasAccess().getHayBolitasKeyword_0());
+    }
+	otherlv_1='(' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getHayBolitasAccess().getLeftParenthesisKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getHayBolitasAccess().getParamColorParserRuleCall_2_0()); 
+	    }
+		lv_param_2_0=ruleColor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getHayBolitasRule());
+	        }
+       		set(
+       			$current, 
+       			"param",
+        		lv_param_2_0, 
+        		"Color");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3=')' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getHayBolitasAccess().getRightParenthesisKeyword_3());
+    }
 )
 ;
 

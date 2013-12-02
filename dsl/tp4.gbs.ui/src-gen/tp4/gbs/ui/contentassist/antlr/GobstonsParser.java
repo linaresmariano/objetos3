@@ -41,9 +41,11 @@ public class GobstonsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDireccionAccess().getAlternatives(), "rule__Direccion__Alternatives");
 					put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
 					put(grammarAccess.getProcedureDeclarationAccess().getGroup(), "rule__ProcedureDeclaration__Group__0");
+					put(grammarAccess.getHayBolitasAccess().getGroup(), "rule__HayBolitas__Group__0");
 					put(grammarAccess.getMoverAccess().getGroup(), "rule__Mover__Group__0");
 					put(grammarAccess.getPonerAccess().getGroup(), "rule__Poner__Group__0");
 					put(grammarAccess.getProcedureDeclarationAccess().getOperationsAssignment_4(), "rule__ProcedureDeclaration__OperationsAssignment_4");
+					put(grammarAccess.getHayBolitasAccess().getParamAssignment_2(), "rule__HayBolitas__ParamAssignment_2");
 					put(grammarAccess.getMoverAccess().getParamAssignment_2(), "rule__Mover__ParamAssignment_2");
 					put(grammarAccess.getPonerAccess().getParamAssignment_2(), "rule__Poner__ParamAssignment_2");
 				}

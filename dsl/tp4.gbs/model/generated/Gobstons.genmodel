@@ -13,6 +13,7 @@
     <genClasses ecoreClass="Gobstons.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gobstons.ecore#//Operation/param"/>
     </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//HayBolitas"/>
     <genClasses ecoreClass="Gobstons.ecore#//Mover"/>
     <genClasses ecoreClass="Gobstons.ecore#//Poner"/>
   </genPackages>

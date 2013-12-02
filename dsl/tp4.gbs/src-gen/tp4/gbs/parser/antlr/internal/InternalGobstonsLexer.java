@@ -13,6 +13,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGobstonsLexer extends Lexer {
     public static final int RULE_ID=4;
+    public static final int T__28=28;
     public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
@@ -159,10 +160,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:16:7: ( 'Mover' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:16:9: 'Mover'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:16:7: ( 'hayBolitas' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:16:9: 'hayBolitas'
             {
-            match("Mover"); 
+            match("hayBolitas"); 
 
 
             }
@@ -220,10 +221,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:19:7: ( 'Poner' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:19:9: 'Poner'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:19:7: ( 'Mover' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:19:9: 'Mover'
             {
-            match("Poner"); 
+            match("Mover"); 
 
 
             }
@@ -241,10 +242,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:20:7: ( 'Norte' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:20:9: 'Norte'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:20:7: ( 'Poner' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:20:9: 'Poner'
             {
-            match("Norte"); 
+            match("Poner"); 
 
 
             }
@@ -262,10 +263,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:21:7: ( 'Sur' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:21:9: 'Sur'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:21:7: ( 'Norte' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:21:9: 'Norte'
             {
-            match("Sur"); 
+            match("Norte"); 
 
 
             }
@@ -283,10 +284,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:22:7: ( 'Este' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:22:9: 'Este'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:22:7: ( 'Sur' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:22:9: 'Sur'
             {
-            match("Este"); 
+            match("Sur"); 
 
 
             }
@@ -304,10 +305,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:23:7: ( 'Oeste' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:23:9: 'Oeste'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:23:7: ( 'Este' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:23:9: 'Este'
             {
-            match("Oeste"); 
+            match("Este"); 
 
 
             }
@@ -325,10 +326,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:24:7: ( 'Rojo' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:24:9: 'Rojo'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:24:7: ( 'Oeste' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:24:9: 'Oeste'
             {
-            match("Rojo"); 
+            match("Oeste"); 
 
 
             }
@@ -346,10 +347,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:25:7: ( 'Verde' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:25:9: 'Verde'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:25:7: ( 'Rojo' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:25:9: 'Rojo'
             {
-            match("Verde"); 
+            match("Rojo"); 
 
 
             }
@@ -367,10 +368,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:26:7: ( 'Azul' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:26:9: 'Azul'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:26:7: ( 'Verde' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:26:9: 'Verde'
             {
-            match("Azul"); 
+            match("Verde"); 
 
 
             }
@@ -388,10 +389,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:27:7: ( 'Negro' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:27:9: 'Negro'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:27:7: ( 'Azul' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:27:9: 'Azul'
             {
-            match("Negro"); 
+            match("Azul"); 
 
 
             }
@@ -404,15 +405,36 @@ public class InternalGobstonsLexer extends Lexer {
     }
     // $ANTLR end "T__27"
 
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:28:7: ( 'Negro' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:28:9: 'Negro'
+            {
+            match("Negro"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:363:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:363:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:424:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:424:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:363:11: ( '^' )?
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:424:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -421,7 +443,7 @@ public class InternalGobstonsLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:363:11: '^'
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:424:11: '^'
                     {
                     match('^'); 
 
@@ -439,7 +461,7 @@ public class InternalGobstonsLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:363:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:424:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -488,10 +510,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:365:10: ( ( '0' .. '9' )+ )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:365:12: ( '0' .. '9' )+
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:426:10: ( ( '0' .. '9' )+ )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:426:12: ( '0' .. '9' )+
             {
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:365:12: ( '0' .. '9' )+
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:426:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -505,7 +527,7 @@ public class InternalGobstonsLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:365:13: '0' .. '9'
+            	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:426:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -537,10 +559,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -558,10 +580,10 @@ public class InternalGobstonsLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -577,7 +599,7 @@ public class InternalGobstonsLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -593,7 +615,7 @@ public class InternalGobstonsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -618,10 +640,10 @@ public class InternalGobstonsLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -637,7 +659,7 @@ public class InternalGobstonsLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -653,7 +675,7 @@ public class InternalGobstonsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:367:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:428:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -696,12 +718,12 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:369:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:369:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:430:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:430:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:369:24: ( options {greedy=false; } : . )*
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:430:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -726,7 +748,7 @@ public class InternalGobstonsLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:369:52: .
+            	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:430:52: .
             	    {
             	    matchAny(); 
 
@@ -756,12 +778,12 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -774,7 +796,7 @@ public class InternalGobstonsLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -794,7 +816,7 @@ public class InternalGobstonsLexer extends Lexer {
                 }
             } while (true);
 
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:40: ( ( '\\r' )? '\\n' )?
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -803,9 +825,9 @@ public class InternalGobstonsLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:41: ( '\\r' )? '\\n'
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:41: ( '\\r' )? '\\n'
                     {
-                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:41: ( '\\r' )?
+                    // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -814,7 +836,7 @@ public class InternalGobstonsLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:371:41: '\\r'
+                            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:432:41: '\\r'
                             {
                             match('\r'); 
 
@@ -846,10 +868,10 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:373:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:373:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:434:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:434:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:373:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:434:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -903,8 +925,8 @@ public class InternalGobstonsLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:375:16: ( . )
-            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:375:18: .
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:436:16: ( . )
+            // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:436:18: .
             {
             matchAny(); 
 
@@ -919,8 +941,8 @@ public class InternalGobstonsLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=24;
+        // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=25;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1043,49 +1065,56 @@ public class InternalGobstonsLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:112: RULE_ID
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:112: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 19 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:118: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 19 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:120: RULE_INT
+            case 20 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:126: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 20 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:129: RULE_STRING
+            case 21 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:135: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 21 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:141: RULE_ML_COMMENT
+            case 22 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:147: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 22 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:157: RULE_SL_COMMENT
+            case 23 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:163: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 23 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:173: RULE_WS
+            case 24 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:179: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 24 :
-                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:181: RULE_ANY_OTHER
+            case 25 :
+                // ../tp4.gbs/src-gen/tp4/gbs/parser/antlr/internal/InternalGobstons.g:1:187: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1099,131 +1128,148 @@ public class InternalGobstonsLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\2\30\1\34\3\uffff\10\30\1\26\2\uffff\3\26\2\uffff\1\30"+
-        "\1\uffff\2\30\5\uffff\11\30\5\uffff\6\30\1\100\6\30\1\107\4\30\1"+
-        "\uffff\1\114\1\30\1\116\1\30\1\120\1\30\1\uffff\1\122\1\123\1\124"+
-        "\1\125\1\uffff\1\126\1\uffff\1\127\1\uffff\1\30\6\uffff\2\30\1\133"+
-        "\1\uffff";
+        "\1\uffff\2\31\1\35\2\uffff\1\31\1\uffff\10\31\1\27\2\uffff\3\27"+
+        "\2\uffff\1\31\1\uffff\2\31\4\uffff\1\31\1\uffff\11\31\5\uffff\7"+
+        "\31\1\104\6\31\1\113\5\31\1\uffff\1\121\1\31\1\123\1\31\1\125\1"+
+        "\31\1\uffff\1\127\1\31\1\131\1\132\1\133\1\uffff\1\134\1\uffff\1"+
+        "\135\1\uffff\1\31\1\uffff\1\31\5\uffff\4\31\1\144\1\31\1\uffff\1"+
+        "\146\1\uffff";
     static final String DFA12_eofS =
-        "\134\uffff";
+        "\147\uffff";
     static final String DFA12_minS =
-        "\1\0\1\162\1\141\1\51\3\uffff\1\157\1\145\1\165\1\163\1\145\1\157"+
-        "\1\145\1\172\1\101\2\uffff\2\0\1\52\2\uffff\1\157\1\uffff\1\151"+
-        "\1\166\5\uffff\1\156\1\162\1\147\1\162\1\164\1\163\1\152\1\162\1"+
-        "\165\5\uffff\1\143\1\156\2\145\1\164\1\162\1\60\1\145\1\164\1\157"+
-        "\1\144\1\154\1\145\1\60\2\162\1\145\1\157\1\uffff\1\60\1\145\1\60"+
-        "\1\145\1\60\1\144\1\uffff\4\60\1\uffff\1\60\1\uffff\1\60\1\uffff"+
-        "\1\165\6\uffff\1\162\1\145\1\60\1\uffff";
+        "\1\0\1\162\1\141\1\51\2\uffff\1\141\1\uffff\1\157\1\145\1\165\1"+
+        "\163\1\145\1\157\1\145\1\172\1\101\2\uffff\2\0\1\52\2\uffff\1\157"+
+        "\1\uffff\1\151\1\166\4\uffff\1\171\1\uffff\1\156\1\162\1\147\1\162"+
+        "\1\164\1\163\1\152\1\162\1\165\5\uffff\1\143\1\156\1\145\1\102\1"+
+        "\145\1\164\1\162\1\60\1\145\1\164\1\157\1\144\1\154\1\145\1\60\1"+
+        "\162\1\157\1\162\1\145\1\157\1\uffff\1\60\1\145\1\60\1\145\1\60"+
+        "\1\144\1\uffff\1\60\1\154\3\60\1\uffff\1\60\1\uffff\1\60\1\uffff"+
+        "\1\165\1\uffff\1\151\5\uffff\1\162\1\164\1\145\1\141\1\60\1\163"+
+        "\1\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\162\1\157\1\51\3\uffff\2\157\1\165\1\163\1\145\1\157"+
-        "\1\145\2\172\2\uffff\2\uffff\1\57\2\uffff\1\157\1\uffff\1\151\1"+
-        "\166\5\uffff\1\156\1\162\1\147\1\162\1\164\1\163\1\152\1\162\1\165"+
-        "\5\uffff\1\143\1\156\2\145\1\164\1\162\1\172\1\145\1\164\1\157\1"+
-        "\144\1\154\1\145\1\172\2\162\1\145\1\157\1\uffff\1\172\1\145\1\172"+
-        "\1\145\1\172\1\144\1\uffff\4\172\1\uffff\1\172\1\uffff\1\172\1\uffff"+
-        "\1\165\6\uffff\1\162\1\145\1\172\1\uffff";
+        "\1\uffff\1\162\1\157\1\51\2\uffff\1\141\1\uffff\2\157\1\165\1\163"+
+        "\1\145\1\157\1\145\2\172\2\uffff\2\uffff\1\57\2\uffff\1\157\1\uffff"+
+        "\1\151\1\166\4\uffff\1\171\1\uffff\1\156\1\162\1\147\1\162\1\164"+
+        "\1\163\1\152\1\162\1\165\5\uffff\1\143\1\156\1\145\1\102\1\145\1"+
+        "\164\1\162\1\172\1\145\1\164\1\157\1\144\1\154\1\145\1\172\1\162"+
+        "\1\157\1\162\1\145\1\157\1\uffff\1\172\1\145\1\172\1\145\1\172\1"+
+        "\144\1\uffff\1\172\1\154\3\172\1\uffff\1\172\1\uffff\1\172\1\uffff"+
+        "\1\165\1\uffff\1\151\5\uffff\1\162\1\164\1\145\1\141\1\172\1\163"+
+        "\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\4\uffff\1\4\1\5\1\10\11\uffff\1\22\1\23\3\uffff\1\27\1\30\1\uffff"+
-        "\1\22\2\uffff\1\3\1\7\1\4\1\5\1\10\11\uffff\1\23\1\24\1\25\1\26"+
-        "\1\27\22\uffff\1\13\6\uffff\1\2\4\uffff\1\14\1\uffff\1\16\1\uffff"+
-        "\1\20\1\uffff\1\6\1\11\1\12\1\21\1\15\1\17\3\uffff\1\1";
+        "\4\uffff\1\4\1\5\1\uffff\1\10\11\uffff\1\23\1\24\3\uffff\1\30\1"+
+        "\31\1\uffff\1\23\2\uffff\1\3\1\7\1\4\1\5\1\uffff\1\10\11\uffff\1"+
+        "\24\1\25\1\26\1\27\1\30\24\uffff\1\14\6\uffff\1\2\5\uffff\1\15\1"+
+        "\uffff\1\17\1\uffff\1\21\1\uffff\1\11\1\uffff\1\12\1\13\1\22\1\16"+
+        "\1\20\6\uffff\1\1\1\uffff\1\6";
     static final String DFA12_specialS =
-        "\1\2\21\uffff\1\1\1\0\110\uffff}>";
+        "\1\0\22\uffff\1\2\1\1\122\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\1\3\1\6"+
-            "\5\26\1\24\12\21\7\26\1\16\3\20\1\12\7\20\1\2\1\10\1\13\1\7"+
-            "\1\20\1\14\1\11\2\20\1\15\4\20\3\26\1\17\1\20\1\26\17\20\1\1"+
-            "\12\20\1\4\1\26\1\5\uff82\26",
-            "\1\27",
-            "\1\31\15\uffff\1\32",
-            "\1\33",
-            "",
+            "\11\27\2\26\2\27\1\26\22\27\1\26\1\27\1\23\4\27\1\24\1\3\1\7"+
+            "\5\27\1\25\12\22\7\27\1\17\3\21\1\13\7\21\1\2\1\11\1\14\1\10"+
+            "\1\21\1\15\1\12\2\21\1\16\4\21\3\27\1\20\1\21\1\27\7\21\1\6"+
+            "\7\21\1\1\12\21\1\4\1\27\1\5\uff82\27",
+            "\1\30",
+            "\1\32\15\uffff\1\33",
+            "\1\34",
             "",
             "",
             "\1\40",
-            "\1\42\11\uffff\1\41",
-            "\1\43",
-            "\1\44",
+            "",
+            "\1\42",
+            "\1\44\11\uffff\1\43",
             "\1\45",
             "\1\46",
             "\1\47",
             "\1\50",
-            "\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\51",
+            "\1\52",
+            "\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "",
-            "\0\52",
-            "\0\52",
-            "\1\53\4\uffff\1\54",
+            "\0\54",
+            "\0\54",
+            "\1\55\4\uffff\1\56",
             "",
             "",
-            "\1\56",
-            "",
-            "\1\57",
             "\1\60",
-            "",
-            "",
-            "",
-            "",
             "",
             "\1\61",
             "\1\62",
+            "",
+            "",
+            "",
+            "",
             "\1\63",
+            "",
             "\1\64",
             "\1\65",
             "\1\66",
             "\1\67",
             "\1\70",
             "\1\71",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\72",
             "\1\73",
             "\1\74",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\75",
             "\1\76",
             "\1\77",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\100",
             "\1\101",
             "\1\102",
             "\1\103",
-            "\1\104",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\105",
             "\1\106",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\107",
             "\1\110",
             "\1\111",
             "\1\112",
-            "\1\113",
-            "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\114",
             "\1\115",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\116",
             "\1\117",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\1\121",
+            "\1\120",
             "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\122",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\124",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\126",
             "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\130",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\1\136",
+            "",
+            "\1\137",
             "",
             "",
             "",
             "",
             "",
+            "\1\140",
+            "\1\141",
+            "\1\142",
+            "\1\143",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\145",
             "",
-            "\1\131",
-            "\1\132",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             ""
     };
 
@@ -1257,33 +1303,13 @@ public class InternalGobstonsLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_19 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 42;}
-
-                        else s = 22;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_18 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 42;}
-
-                        else s = 22;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1297,39 +1323,61 @@ public class InternalGobstonsLexer extends Lexer {
 
                         else if ( (LA12_0=='}') ) {s = 5;}
 
-                        else if ( (LA12_0==')') ) {s = 6;}
+                        else if ( (LA12_0=='h') ) {s = 6;}
 
-                        else if ( (LA12_0=='P') ) {s = 7;}
+                        else if ( (LA12_0==')') ) {s = 7;}
 
-                        else if ( (LA12_0=='N') ) {s = 8;}
+                        else if ( (LA12_0=='P') ) {s = 8;}
 
-                        else if ( (LA12_0=='S') ) {s = 9;}
+                        else if ( (LA12_0=='N') ) {s = 9;}
 
-                        else if ( (LA12_0=='E') ) {s = 10;}
+                        else if ( (LA12_0=='S') ) {s = 10;}
 
-                        else if ( (LA12_0=='O') ) {s = 11;}
+                        else if ( (LA12_0=='E') ) {s = 11;}
 
-                        else if ( (LA12_0=='R') ) {s = 12;}
+                        else if ( (LA12_0=='O') ) {s = 12;}
 
-                        else if ( (LA12_0=='V') ) {s = 13;}
+                        else if ( (LA12_0=='R') ) {s = 13;}
 
-                        else if ( (LA12_0=='A') ) {s = 14;}
+                        else if ( (LA12_0=='V') ) {s = 14;}
 
-                        else if ( (LA12_0=='^') ) {s = 15;}
+                        else if ( (LA12_0=='A') ) {s = 15;}
 
-                        else if ( ((LA12_0>='B' && LA12_0<='D')||(LA12_0>='F' && LA12_0<='L')||LA12_0=='Q'||(LA12_0>='T' && LA12_0<='U')||(LA12_0>='W' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='o')||(LA12_0>='q' && LA12_0<='z')) ) {s = 16;}
+                        else if ( (LA12_0=='^') ) {s = 16;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 17;}
+                        else if ( ((LA12_0>='B' && LA12_0<='D')||(LA12_0>='F' && LA12_0<='L')||LA12_0=='Q'||(LA12_0>='T' && LA12_0<='U')||(LA12_0>='W' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='g')||(LA12_0>='i' && LA12_0<='o')||(LA12_0>='q' && LA12_0<='z')) ) {s = 17;}
 
-                        else if ( (LA12_0=='\"') ) {s = 18;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 18;}
 
-                        else if ( (LA12_0=='\'') ) {s = 19;}
+                        else if ( (LA12_0=='\"') ) {s = 19;}
 
-                        else if ( (LA12_0=='/') ) {s = 20;}
+                        else if ( (LA12_0=='\'') ) {s = 20;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
+                        else if ( (LA12_0=='/') ) {s = 21;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 22;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 22;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 23;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_20 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 44;}
+
+                        else s = 23;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_19 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 44;}
+
+                        else s = 23;
 
                         if ( s>=0 ) return s;
                         break;

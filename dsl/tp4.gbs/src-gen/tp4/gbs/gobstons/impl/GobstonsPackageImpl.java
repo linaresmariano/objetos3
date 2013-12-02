@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import tp4.gbs.gobstons.GobstonsFactory;
 import tp4.gbs.gobstons.GobstonsPackage;
+import tp4.gbs.gobstons.HayBolitas;
 import tp4.gbs.gobstons.Mover;
 import tp4.gbs.gobstons.Operation;
 import tp4.gbs.gobstons.Poner;
@@ -37,6 +38,13 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
    * @generated
    */
   private EClass operationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass hayBolitasEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -160,6 +168,16 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getHayBolitas()
+  {
+    return hayBolitasEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMover()
   {
     return moverEClass;
@@ -211,6 +229,8 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
     operationEClass = createEClass(OPERATION);
     createEAttribute(operationEClass, OPERATION__PARAM);
 
+    hayBolitasEClass = createEClass(HAY_BOLITAS);
+
     moverEClass = createEClass(MOVER);
 
     ponerEClass = createEClass(PONER);
@@ -245,6 +265,7 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    hayBolitasEClass.getESuperTypes().add(this.getOperation());
     moverEClass.getESuperTypes().add(this.getOperation());
     ponerEClass.getESuperTypes().add(this.getOperation());
 
@@ -254,6 +275,8 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
 
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperation_Param(), ecorePackage.getEString(), "param", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(hayBolitasEClass, HayBolitas.class, "HayBolitas", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(moverEClass, Mover.class, "Mover", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

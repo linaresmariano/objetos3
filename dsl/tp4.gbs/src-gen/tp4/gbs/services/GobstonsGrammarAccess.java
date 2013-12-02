@@ -63,12 +63,13 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cMoverParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPonerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cHayBolitasParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Operation:
-		//	Mover | Poner;
+		//	Mover | Poner | HayBolitas;
 		public ParserRule getRule() { return rule; }
 
-		//Mover | Poner
+		//Mover | Poner | HayBolitas
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Mover
@@ -76,6 +77,41 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Poner
 		public RuleCall getPonerParserRuleCall_1() { return cPonerParserRuleCall_1; }
+
+		//HayBolitas
+		public RuleCall getHayBolitasParserRuleCall_2() { return cHayBolitasParserRuleCall_2; }
+	}
+
+	public class HayBolitasElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HayBolitas");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHayBolitasKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cParamAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cParamColorParserRuleCall_2_0 = (RuleCall)cParamAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//HayBolitas:
+		//	"hayBolitas" "(" param=Color ")";
+		public ParserRule getRule() { return rule; }
+
+		//"hayBolitas" "(" param=Color ")"
+		public Group getGroup() { return cGroup; }
+
+		//"hayBolitas"
+		public Keyword getHayBolitasKeyword_0() { return cHayBolitasKeyword_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+
+		//param=Color
+		public Assignment getParamAssignment_2() { return cParamAssignment_2; }
+
+		//Color
+		public RuleCall getParamColorParserRuleCall_2_0() { return cParamColorParserRuleCall_2_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 
 	public class MoverElements extends AbstractParserRuleElementFinder {
@@ -201,6 +237,7 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private ProcedureDeclarationElements pProcedureDeclaration;
 	private OperationElements pOperation;
+	private HayBolitasElements pHayBolitas;
 	private MoverElements pMover;
 	private PonerElements pPoner;
 	private DireccionElements pDireccion;
@@ -255,13 +292,23 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Operation:
-	//	Mover | Poner;
+	//	Mover | Poner | HayBolitas;
 	public OperationElements getOperationAccess() {
 		return (pOperation != null) ? pOperation : (pOperation = new OperationElements());
 	}
 	
 	public ParserRule getOperationRule() {
 		return getOperationAccess().getRule();
+	}
+
+	//HayBolitas:
+	//	"hayBolitas" "(" param=Color ")";
+	public HayBolitasElements getHayBolitasAccess() {
+		return (pHayBolitas != null) ? pHayBolitas : (pHayBolitas = new HayBolitasElements());
+	}
+	
+	public ParserRule getHayBolitasRule() {
+		return getHayBolitasAccess().getRule();
 	}
 
 	//Mover:

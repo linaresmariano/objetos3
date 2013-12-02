@@ -41,6 +41,15 @@ public interface GobstonsFactory extends EFactory
   Operation createOperation();
 
   /**
+   * Returns a new object of class '<em>Hay Bolitas</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hay Bolitas</em>'.
+   * @generated
+   */
+  HayBolitas createHayBolitas();
+
+  /**
    * Returns a new object of class '<em>Mover</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -113,6 +113,34 @@ public interface GobstonsPackage extends EPackage
   int OPERATION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link tp4.gbs.gobstons.impl.HayBolitasImpl <em>Hay Bolitas</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see tp4.gbs.gobstons.impl.HayBolitasImpl
+   * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getHayBolitas()
+   * @generated
+   */
+  int HAY_BOLITAS = 2;
+
+  /**
+   * The feature id for the '<em><b>Param</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAY_BOLITAS__PARAM = OPERATION__PARAM;
+
+  /**
+   * The number of structural features of the '<em>Hay Bolitas</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAY_BOLITAS_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link tp4.gbs.gobstons.impl.MoverImpl <em>Mover</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -120,7 +148,7 @@ public interface GobstonsPackage extends EPackage
    * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getMover()
    * @generated
    */
-  int MOVER = 2;
+  int MOVER = 3;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' attribute.
@@ -148,7 +176,7 @@ public interface GobstonsPackage extends EPackage
    * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getPoner()
    * @generated
    */
-  int PONER = 3;
+  int PONER = 4;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' attribute.
@@ -210,6 +238,16 @@ public interface GobstonsPackage extends EPackage
    * @generated
    */
   EAttribute getOperation_Param();
+
+  /**
+   * Returns the meta object for class '{@link tp4.gbs.gobstons.HayBolitas <em>Hay Bolitas</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Hay Bolitas</em>'.
+   * @see tp4.gbs.gobstons.HayBolitas
+   * @generated
+   */
+  EClass getHayBolitas();
 
   /**
    * Returns the meta object for class '{@link tp4.gbs.gobstons.Mover <em>Mover</em>}'.
@@ -289,6 +327,16 @@ public interface GobstonsPackage extends EPackage
      * @generated
      */
     EAttribute OPERATION__PARAM = eINSTANCE.getOperation_Param();
+
+    /**
+     * The meta object literal for the '{@link tp4.gbs.gobstons.impl.HayBolitasImpl <em>Hay Bolitas</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see tp4.gbs.gobstons.impl.HayBolitasImpl
+     * @see tp4.gbs.gobstons.impl.GobstonsPackageImpl#getHayBolitas()
+     * @generated
+     */
+    EClass HAY_BOLITAS = eINSTANCE.getHayBolitas();
 
     /**
      * The meta object literal for the '{@link tp4.gbs.gobstons.impl.MoverImpl <em>Mover</em>}' class.
