@@ -4,12 +4,23 @@ grammar tp4.gbs.Gobstons with org.eclipse.xtext.common.Terminals
 generate gobstons "http://www.gbs.tp4/Gobstons"
 
 ProcedureDeclaration:
+	{ProcedureDeclaration}
 	'procedure' 'Main' '()' '{' 
     	(operations+=Operation)*
     '}';
     
 Operation:
+	Function | Conditional;
+	
+Function:
 	Mover | Poner | HayBolitas;
+
+Conditional:
+	'if''(' boolExpresion=HayBolitas ')''{'
+		trueBlock=Operation
+	'}''else''{'
+		falseBlock=Operation
+	'}';
 
 HayBolitas:
 	'hayBolitas''('param=Color')';

@@ -86,10 +86,27 @@ public class GobstonsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GobstonsPackage.FUNCTION:
+      {
+        Function function = (Function)theEObject;
+        T result = caseFunction(function);
+        if (result == null) result = caseOperation(function);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GobstonsPackage.CONDITIONAL:
+      {
+        Conditional conditional = (Conditional)theEObject;
+        T result = caseConditional(conditional);
+        if (result == null) result = caseOperation(conditional);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GobstonsPackage.HAY_BOLITAS:
       {
         HayBolitas hayBolitas = (HayBolitas)theEObject;
         T result = caseHayBolitas(hayBolitas);
+        if (result == null) result = caseFunction(hayBolitas);
         if (result == null) result = caseOperation(hayBolitas);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -98,6 +115,7 @@ public class GobstonsSwitch<T> extends Switch<T>
       {
         Mover mover = (Mover)theEObject;
         T result = caseMover(mover);
+        if (result == null) result = caseFunction(mover);
         if (result == null) result = caseOperation(mover);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -106,6 +124,7 @@ public class GobstonsSwitch<T> extends Switch<T>
       {
         Poner poner = (Poner)theEObject;
         T result = casePoner(poner);
+        if (result == null) result = caseFunction(poner);
         if (result == null) result = caseOperation(poner);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -142,6 +161,38 @@ public class GobstonsSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOperation(Operation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Function</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFunction(Function object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Conditional</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Conditional</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConditional(Conditional object)
   {
     return null;
   }

@@ -16,7 +16,7 @@ import tp4.gbs.gobstons.HayBolitas;
  *
  * @generated
  */
-public class HayBolitasImpl extends OperationImpl implements HayBolitas
+public class HayBolitasImpl extends FunctionImpl implements HayBolitas
 {
   /**
    * <!-- begin-user-doc -->

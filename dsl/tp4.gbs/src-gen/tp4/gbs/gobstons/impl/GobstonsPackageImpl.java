@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import tp4.gbs.gobstons.Conditional;
+import tp4.gbs.gobstons.Function;
 import tp4.gbs.gobstons.GobstonsFactory;
 import tp4.gbs.gobstons.GobstonsPackage;
 import tp4.gbs.gobstons.HayBolitas;
@@ -38,6 +40,20 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
    * @generated
    */
   private EClass operationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass functionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditionalEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,9 +174,59 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getOperation_Param()
+  public EClass getFunction()
   {
-    return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
+    return functionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFunction_Param()
+  {
+    return (EAttribute)functionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConditional()
+  {
+    return conditionalEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditional_BoolExpresion()
+  {
+    return (EReference)conditionalEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditional_TrueBlock()
+  {
+    return (EReference)conditionalEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditional_FalseBlock()
+  {
+    return (EReference)conditionalEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -227,7 +293,14 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
     createEReference(procedureDeclarationEClass, PROCEDURE_DECLARATION__OPERATIONS);
 
     operationEClass = createEClass(OPERATION);
-    createEAttribute(operationEClass, OPERATION__PARAM);
+
+    functionEClass = createEClass(FUNCTION);
+    createEAttribute(functionEClass, FUNCTION__PARAM);
+
+    conditionalEClass = createEClass(CONDITIONAL);
+    createEReference(conditionalEClass, CONDITIONAL__BOOL_EXPRESION);
+    createEReference(conditionalEClass, CONDITIONAL__TRUE_BLOCK);
+    createEReference(conditionalEClass, CONDITIONAL__FALSE_BLOCK);
 
     hayBolitasEClass = createEClass(HAY_BOLITAS);
 
@@ -265,16 +338,25 @@ public class GobstonsPackageImpl extends EPackageImpl implements GobstonsPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    hayBolitasEClass.getESuperTypes().add(this.getOperation());
-    moverEClass.getESuperTypes().add(this.getOperation());
-    ponerEClass.getESuperTypes().add(this.getOperation());
+    functionEClass.getESuperTypes().add(this.getOperation());
+    conditionalEClass.getESuperTypes().add(this.getOperation());
+    hayBolitasEClass.getESuperTypes().add(this.getFunction());
+    moverEClass.getESuperTypes().add(this.getFunction());
+    ponerEClass.getESuperTypes().add(this.getFunction());
 
     // Initialize classes and features; add operations and parameters
     initEClass(procedureDeclarationEClass, ProcedureDeclaration.class, "ProcedureDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getProcedureDeclaration_Operations(), this.getOperation(), null, "operations", null, 0, -1, ProcedureDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOperation_Param(), ecorePackage.getEString(), "param", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFunction_Param(), ecorePackage.getEString(), "param", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(conditionalEClass, Conditional.class, "Conditional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConditional_BoolExpresion(), this.getHayBolitas(), null, "boolExpresion", null, 0, 1, Conditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditional_TrueBlock(), this.getOperation(), null, "trueBlock", null, 0, 1, Conditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditional_FalseBlock(), this.getOperation(), null, "falseBlock", null, 0, 1, Conditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hayBolitasEClass, HayBolitas.class, "HayBolitas", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

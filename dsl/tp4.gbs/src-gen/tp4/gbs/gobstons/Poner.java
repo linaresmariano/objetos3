@@ -13,6 +13,6 @@ package tp4.gbs.gobstons;
  * @model
  * @generated
  */
-public interface Poner extends Operation
+public interface Poner extends Function
 {
 } // Poner

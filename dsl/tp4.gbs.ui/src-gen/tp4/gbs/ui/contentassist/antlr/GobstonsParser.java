@@ -38,13 +38,18 @@ public class GobstonsParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getOperationAccess().getAlternatives(), "rule__Operation__Alternatives");
+					put(grammarAccess.getFunctionAccess().getAlternatives(), "rule__Function__Alternatives");
 					put(grammarAccess.getDireccionAccess().getAlternatives(), "rule__Direccion__Alternatives");
 					put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
 					put(grammarAccess.getProcedureDeclarationAccess().getGroup(), "rule__ProcedureDeclaration__Group__0");
+					put(grammarAccess.getConditionalAccess().getGroup(), "rule__Conditional__Group__0");
 					put(grammarAccess.getHayBolitasAccess().getGroup(), "rule__HayBolitas__Group__0");
 					put(grammarAccess.getMoverAccess().getGroup(), "rule__Mover__Group__0");
 					put(grammarAccess.getPonerAccess().getGroup(), "rule__Poner__Group__0");
-					put(grammarAccess.getProcedureDeclarationAccess().getOperationsAssignment_4(), "rule__ProcedureDeclaration__OperationsAssignment_4");
+					put(grammarAccess.getProcedureDeclarationAccess().getOperationsAssignment_5(), "rule__ProcedureDeclaration__OperationsAssignment_5");
+					put(grammarAccess.getConditionalAccess().getBoolExpresionAssignment_2(), "rule__Conditional__BoolExpresionAssignment_2");
+					put(grammarAccess.getConditionalAccess().getTrueBlockAssignment_5(), "rule__Conditional__TrueBlockAssignment_5");
+					put(grammarAccess.getConditionalAccess().getFalseBlockAssignment_9(), "rule__Conditional__FalseBlockAssignment_9");
 					put(grammarAccess.getHayBolitasAccess().getParamAssignment_2(), "rule__HayBolitas__ParamAssignment_2");
 					put(grammarAccess.getMoverAccess().getParamAssignment_2(), "rule__Mover__ParamAssignment_2");
 					put(grammarAccess.getPonerAccess().getParamAssignment_2(), "rule__Poner__ParamAssignment_2");

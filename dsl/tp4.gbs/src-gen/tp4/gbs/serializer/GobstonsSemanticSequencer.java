@@ -13,6 +13,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import tp4.gbs.gobstons.Conditional;
 import tp4.gbs.gobstons.GobstonsPackage;
 import tp4.gbs.gobstons.HayBolitas;
 import tp4.gbs.gobstons.Mover;
@@ -28,22 +29,32 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == GobstonsPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case GobstonsPackage.CONDITIONAL:
+				if(context == grammarAccess.getConditionalRule() ||
+				   context == grammarAccess.getOperationRule()) {
+					sequence_Conditional(context, (Conditional) semanticObject); 
+					return; 
+				}
+				else break;
 			case GobstonsPackage.HAY_BOLITAS:
-				if(context == grammarAccess.getHayBolitasRule() ||
+				if(context == grammarAccess.getFunctionRule() ||
+				   context == grammarAccess.getHayBolitasRule() ||
 				   context == grammarAccess.getOperationRule()) {
 					sequence_HayBolitas(context, (HayBolitas) semanticObject); 
 					return; 
 				}
 				else break;
 			case GobstonsPackage.MOVER:
-				if(context == grammarAccess.getMoverRule() ||
+				if(context == grammarAccess.getFunctionRule() ||
+				   context == grammarAccess.getMoverRule() ||
 				   context == grammarAccess.getOperationRule()) {
 					sequence_Mover(context, (Mover) semanticObject); 
 					return; 
 				}
 				else break;
 			case GobstonsPackage.PONER:
-				if(context == grammarAccess.getOperationRule() ||
+				if(context == grammarAccess.getFunctionRule() ||
+				   context == grammarAccess.getOperationRule() ||
 				   context == grammarAccess.getPonerRule()) {
 					sequence_Poner(context, (Poner) semanticObject); 
 					return; 
@@ -61,12 +72,34 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     (boolExpresion=HayBolitas trueBlock=Operation falseBlock=Operation)
+	 */
+	protected void sequence_Conditional(EObject context, Conditional semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.CONDITIONAL__BOOL_EXPRESION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.CONDITIONAL__BOOL_EXPRESION));
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.CONDITIONAL__TRUE_BLOCK) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.CONDITIONAL__TRUE_BLOCK));
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.CONDITIONAL__FALSE_BLOCK) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.CONDITIONAL__FALSE_BLOCK));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConditionalAccess().getBoolExpresionHayBolitasParserRuleCall_2_0(), semanticObject.getBoolExpresion());
+		feeder.accept(grammarAccess.getConditionalAccess().getTrueBlockOperationParserRuleCall_5_0(), semanticObject.getTrueBlock());
+		feeder.accept(grammarAccess.getConditionalAccess().getFalseBlockOperationParserRuleCall_9_0(), semanticObject.getFalseBlock());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     param=Color
 	 */
 	protected void sequence_HayBolitas(EObject context, HayBolitas semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM));
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.FUNCTION__PARAM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.FUNCTION__PARAM));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -81,8 +114,8 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_Mover(EObject context, Mover semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM));
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.FUNCTION__PARAM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.FUNCTION__PARAM));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -97,8 +130,8 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_Poner(EObject context, Poner semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.OPERATION__PARAM));
+			if(transientValues.isValueTransient(semanticObject, GobstonsPackage.Literals.FUNCTION__PARAM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GobstonsPackage.Literals.FUNCTION__PARAM));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -109,7 +142,7 @@ public class GobstonsSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     operations+=Operation*
+	 *     (operations+=Operation*)
 	 */
 	protected void sequence_ProcedureDeclaration(EObject context, ProcedureDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

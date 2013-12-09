@@ -5,6 +5,8 @@ import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
 import tp4.gbs.gobstons.Operation
 import tp4.gbs.gobstons.ProcedureDeclaration
+import tp4.gbs.gobstons.Conditional
+import tp4.gbs.gobstons.Function
 
 class GobstonsGenerator implements IGenerator {
 
@@ -14,12 +16,18 @@ class GobstonsGenerator implements IGenerator {
 		}
 	}
 
-	def compile(Operation op) {
-		'''
-		tablero.«op.class.simpleName.toLowerCase.substring(0, op.class.simpleName.length-4)»("«op.param»");
-		'''
+	def dispatch compile(Function op) {
+		'''tablero.«op.class.simpleName.toLowerCase.substring(0, op.class.simpleName.length-4)»("«op.param»")'''
 	}
-
+	
+	def dispatch compile(Conditional op) {
+		'''if(«op.boolExpresion.compile») {
+	«op.trueBlock.compile»;
+} else {
+	«op.falseBlock.compile»;
+}'''
+	}
+	
 	def compile(ProcedureDeclaration f) {
 		'''
 			import tp4.gbs.model.Tablero;
@@ -30,7 +38,7 @@ class GobstonsGenerator implements IGenerator {
 				 	Tablero tablero = new Tablero();
 				 	tablero.print();
 				 	«FOR Operation operation : f.operations»
-				 		«operation.compile»
+				 		«operation.compile»;
 				 	«ENDFOR»
 				 	tablero.print();
 				}

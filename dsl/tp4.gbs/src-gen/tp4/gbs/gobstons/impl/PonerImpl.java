@@ -16,7 +16,7 @@ import tp4.gbs.gobstons.Poner;
  *
  * @generated
  */
-public class PonerImpl extends OperationImpl implements Poner
+public class PonerImpl extends FunctionImpl implements Poner
 {
   /**
    * <!-- begin-user-doc -->

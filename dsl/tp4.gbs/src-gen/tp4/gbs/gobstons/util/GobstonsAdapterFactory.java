@@ -85,6 +85,16 @@ public class GobstonsAdapterFactory extends AdapterFactoryImpl
         return createOperationAdapter();
       }
       @Override
+      public Adapter caseFunction(Function object)
+      {
+        return createFunctionAdapter();
+      }
+      @Override
+      public Adapter caseConditional(Conditional object)
+      {
+        return createConditionalAdapter();
+      }
+      @Override
       public Adapter caseHayBolitas(HayBolitas object)
       {
         return createHayBolitasAdapter();
@@ -147,6 +157,36 @@ public class GobstonsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Function <em>Function</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see tp4.gbs.gobstons.Function
+   * @generated
+   */
+  public Adapter createFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link tp4.gbs.gobstons.Conditional <em>Conditional</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see tp4.gbs.gobstons.Conditional
+   * @generated
+   */
+  public Adapter createConditionalAdapter()
   {
     return null;
   }

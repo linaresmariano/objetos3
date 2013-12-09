@@ -16,7 +16,7 @@ import tp4.gbs.gobstons.Mover;
  *
  * @generated
  */
-public class MoverImpl extends OperationImpl implements Mover
+public class MoverImpl extends FunctionImpl implements Mover
 {
   /**
    * <!-- begin-user-doc -->

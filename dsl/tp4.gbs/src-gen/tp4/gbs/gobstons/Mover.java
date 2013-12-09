@@ -13,6 +13,6 @@ package tp4.gbs.gobstons;
  * @model
  * @generated
  */
-public interface Mover extends Operation
+public interface Mover extends Function
 {
 } // Mover

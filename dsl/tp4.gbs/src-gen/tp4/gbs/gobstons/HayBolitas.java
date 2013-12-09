@@ -13,6 +13,6 @@ package tp4.gbs.gobstons;
  * @model
  * @generated
  */
-public interface HayBolitas extends Operation
+public interface HayBolitas extends Function
 {
 } // HayBolitas

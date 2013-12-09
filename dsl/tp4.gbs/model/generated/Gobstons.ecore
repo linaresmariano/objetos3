@@ -5,10 +5,19 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
         eType="#//Operation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+  <eClassifiers xsi:type="ecore:EClass" name="Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="param" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HayBolitas" eSuperTypes="#//Operation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Mover" eSuperTypes="#//Operation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Poner" eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditional" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boolExpresion" eType="#//HayBolitas"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trueBlock" eType="#//Operation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="falseBlock" eType="#//Operation"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HayBolitas" eSuperTypes="#//Function"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mover" eSuperTypes="#//Function"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Poner" eSuperTypes="#//Function"/>
 </ecore:EPackage>

@@ -21,51 +21,75 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 	public class ProcedureDeclarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProcedureDeclaration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cProcedureKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cMainKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftParenthesisRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOperationsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOperationsOperationParserRuleCall_4_0 = (RuleCall)cOperationsAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Action cProcedureDeclarationAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cProcedureKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cMainKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftParenthesisRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOperationsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOperationsOperationParserRuleCall_5_0 = (RuleCall)cOperationsAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//ProcedureDeclaration:
-		//	"procedure" "Main" "()" "{" operations+=Operation* "}";
+		//	{ProcedureDeclaration} "procedure" "Main" "()" "{" operations+=Operation* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"procedure" "Main" "()" "{" operations+=Operation* "}"
+		//{ProcedureDeclaration} "procedure" "Main" "()" "{" operations+=Operation* "}"
 		public Group getGroup() { return cGroup; }
 
+		//{ProcedureDeclaration}
+		public Action getProcedureDeclarationAction_0() { return cProcedureDeclarationAction_0; }
+
 		//"procedure"
-		public Keyword getProcedureKeyword_0() { return cProcedureKeyword_0; }
+		public Keyword getProcedureKeyword_1() { return cProcedureKeyword_1; }
 
 		//"Main"
-		public Keyword getMainKeyword_1() { return cMainKeyword_1; }
+		public Keyword getMainKeyword_2() { return cMainKeyword_2; }
 
 		//"()"
-		public Keyword getLeftParenthesisRightParenthesisKeyword_2() { return cLeftParenthesisRightParenthesisKeyword_2; }
+		public Keyword getLeftParenthesisRightParenthesisKeyword_3() { return cLeftParenthesisRightParenthesisKeyword_3; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//operations+=Operation*
-		public Assignment getOperationsAssignment_4() { return cOperationsAssignment_4; }
+		public Assignment getOperationsAssignment_5() { return cOperationsAssignment_5; }
 
 		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_4_0() { return cOperationsOperationParserRuleCall_4_0; }
+		public RuleCall getOperationsOperationParserRuleCall_5_0() { return cOperationsOperationParserRuleCall_5_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class OperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Operation");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cFunctionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cConditionalParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Operation:
+		//	Function | Conditional;
+		public ParserRule getRule() { return rule; }
+
+		//Function | Conditional
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Function
+		public RuleCall getFunctionParserRuleCall_0() { return cFunctionParserRuleCall_0; }
+
+		//Conditional
+		public RuleCall getConditionalParserRuleCall_1() { return cConditionalParserRuleCall_1; }
+	}
+
+	public class FunctionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Function");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cMoverParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPonerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cHayBolitasParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//Operation:
+		//Function:
 		//	Mover | Poner | HayBolitas;
 		public ParserRule getRule() { return rule; }
 
@@ -80,6 +104,74 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 
 		//HayBolitas
 		public RuleCall getHayBolitasParserRuleCall_2() { return cHayBolitasParserRuleCall_2; }
+	}
+
+	public class ConditionalElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Conditional");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cBoolExpresionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cBoolExpresionHayBolitasParserRuleCall_2_0 = (RuleCall)cBoolExpresionAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTrueBlockAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTrueBlockOperationParserRuleCall_5_0 = (RuleCall)cTrueBlockAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cElseKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cLeftCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cFalseBlockAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cFalseBlockOperationParserRuleCall_9_0 = (RuleCall)cFalseBlockAssignment_9.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		
+		//Conditional:
+		//	"if" "(" boolExpresion=HayBolitas ")" "{" trueBlock=Operation "}" "else" "{" falseBlock=Operation "}";
+		public ParserRule getRule() { return rule; }
+
+		//"if" "(" boolExpresion=HayBolitas ")" "{" trueBlock=Operation "}" "else" "{" falseBlock=Operation "}"
+		public Group getGroup() { return cGroup; }
+
+		//"if"
+		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+
+		//boolExpresion=HayBolitas
+		public Assignment getBoolExpresionAssignment_2() { return cBoolExpresionAssignment_2; }
+
+		//HayBolitas
+		public RuleCall getBoolExpresionHayBolitasParserRuleCall_2_0() { return cBoolExpresionHayBolitasParserRuleCall_2_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+
+		//trueBlock=Operation
+		public Assignment getTrueBlockAssignment_5() { return cTrueBlockAssignment_5; }
+
+		//Operation
+		public RuleCall getTrueBlockOperationParserRuleCall_5_0() { return cTrueBlockOperationParserRuleCall_5_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+
+		//"else"
+		public Keyword getElseKeyword_7() { return cElseKeyword_7; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_8() { return cLeftCurlyBracketKeyword_8; }
+
+		//falseBlock=Operation
+		public Assignment getFalseBlockAssignment_9() { return cFalseBlockAssignment_9; }
+
+		//Operation
+		public RuleCall getFalseBlockOperationParserRuleCall_9_0() { return cFalseBlockOperationParserRuleCall_9_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class HayBolitasElements extends AbstractParserRuleElementFinder {
@@ -237,6 +329,8 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private ProcedureDeclarationElements pProcedureDeclaration;
 	private OperationElements pOperation;
+	private FunctionElements pFunction;
+	private ConditionalElements pConditional;
 	private HayBolitasElements pHayBolitas;
 	private MoverElements pMover;
 	private PonerElements pPoner;
@@ -282,7 +376,7 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//ProcedureDeclaration:
-	//	"procedure" "Main" "()" "{" operations+=Operation* "}";
+	//	{ProcedureDeclaration} "procedure" "Main" "()" "{" operations+=Operation* "}";
 	public ProcedureDeclarationElements getProcedureDeclarationAccess() {
 		return (pProcedureDeclaration != null) ? pProcedureDeclaration : (pProcedureDeclaration = new ProcedureDeclarationElements());
 	}
@@ -292,13 +386,33 @@ public class GobstonsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Operation:
-	//	Mover | Poner | HayBolitas;
+	//	Function | Conditional;
 	public OperationElements getOperationAccess() {
 		return (pOperation != null) ? pOperation : (pOperation = new OperationElements());
 	}
 	
 	public ParserRule getOperationRule() {
 		return getOperationAccess().getRule();
+	}
+
+	//Function:
+	//	Mover | Poner | HayBolitas;
+	public FunctionElements getFunctionAccess() {
+		return (pFunction != null) ? pFunction : (pFunction = new FunctionElements());
+	}
+	
+	public ParserRule getFunctionRule() {
+		return getFunctionAccess().getRule();
+	}
+
+	//Conditional:
+	//	"if" "(" boolExpresion=HayBolitas ")" "{" trueBlock=Operation "}" "else" "{" falseBlock=Operation "}";
+	public ConditionalElements getConditionalAccess() {
+		return (pConditional != null) ? pConditional : (pConditional = new ConditionalElements());
+	}
+	
+	public ParserRule getConditionalRule() {
+		return getConditionalAccess().getRule();
 	}
 
 	//HayBolitas:

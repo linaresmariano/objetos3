@@ -10,8 +10,14 @@
     <genClasses ecoreClass="Gobstons.ecore#//ProcedureDeclaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//ProcedureDeclaration/operations"/>
     </genClasses>
-    <genClasses ecoreClass="Gobstons.ecore#//Operation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gobstons.ecore#//Operation/param"/>
+    <genClasses ecoreClass="Gobstons.ecore#//Operation"/>
+    <genClasses ecoreClass="Gobstons.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gobstons.ecore#//Function/param"/>
+    </genClasses>
+    <genClasses ecoreClass="Gobstons.ecore#//Conditional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Conditional/boolExpresion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Conditional/trueBlock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gobstons.ecore#//Conditional/falseBlock"/>
     </genClasses>
     <genClasses ecoreClass="Gobstons.ecore#//HayBolitas"/>
     <genClasses ecoreClass="Gobstons.ecore#//Mover"/>

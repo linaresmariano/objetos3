@@ -66,6 +66,8 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
     {
       case GobstonsPackage.PROCEDURE_DECLARATION: return createProcedureDeclaration();
       case GobstonsPackage.OPERATION: return createOperation();
+      case GobstonsPackage.FUNCTION: return createFunction();
+      case GobstonsPackage.CONDITIONAL: return createConditional();
       case GobstonsPackage.HAY_BOLITAS: return createHayBolitas();
       case GobstonsPackage.MOVER: return createMover();
       case GobstonsPackage.PONER: return createPoner();
@@ -94,6 +96,28 @@ public class GobstonsFactoryImpl extends EFactoryImpl implements GobstonsFactory
   {
     OperationImpl operation = new OperationImpl();
     return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Function createFunction()
+  {
+    FunctionImpl function = new FunctionImpl();
+    return function;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Conditional createConditional()
+  {
+    ConditionalImpl conditional = new ConditionalImpl();
+    return conditional;
   }
 
   /**
